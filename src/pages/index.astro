@@ -1,0 +1,67 @@
+---
+import Hero from '../components/Hero.astro';
+import PillarCard from '../components/PillarCard.astro';
+import Section from '../components/Section.astro';
+import Layout from '../layouts/Layout.astro';
+
+const pillars = [
+	{
+		title: 'Advies',
+		description:
+			'Praktisch advies om digitale informatiestromen in ontwerp, bestek en meetstaat helder op elkaar af te stemmen.',
+	},
+	{
+		title: 'Opleidingen',
+		description:
+			'Gerichte opleidingen voor teams die minder tijd willen verliezen aan zoeken, dubbel werk en versnipperde afspraken.',
+	},
+	{
+		title: 'Allaambak',
+		description:
+			'Een groeiende gereedschapskist met bruikbare formats, methodes en hulpmiddelen voor meer samenhang in projecten.',
+	},
+];
+---
+
+<Layout>
+	<main>
+		<Hero
+			title="Grondlaag"
+			subtitle="Digitale structuur voor architecten"
+			text="Wanneer modellen, documenten en afspraken door elkaar lopen, groeit digitale chaos snel uit tot tijdverlies. Grondlaag helpt om opnieuw rust, samenhang en houvast te brengen in de basis van je projectwerking."
+			ctaHref="mailto:grondlaag@proton.me"
+			ctaLabel="Neem contact op"
+		/>
+
+		<Section
+			id="probleem"
+			title="Het probleem"
+			intro="In veel projecten werken model, bestek en meetstaat naast elkaar in plaats van met elkaar."
+		>
+			<div class="problem-grid">
+				<p>
+					Informatie wordt op meerdere plaatsen bijgehouden, verschilt van document tot document en verliest onderweg haar context.
+				</p>
+				<p>
+					Dat zorgt voor tijdverlies, dubbel werk en extra controle, net op de momenten waarop duidelijkheid het belangrijkst is.
+				</p>
+			</div>
+		</Section>
+
+		<Section
+			id="pijlers"
+			title="Drie pijlers"
+			intro="Grondlaag bouwt aan een rustige, werkbare digitale basis via drie complementaire sporen."
+		>
+			<div class="pillar-grid">
+				{pillars.map((pillar) => <PillarCard {...pillar} />)}
+			</div>
+		</Section>
+
+		<Section id="contact" title="Contact">
+			<p class="contact-line">
+				Neem vrijblijvend contact op via <a href="mailto:grondlaag@proton.me">grondlaag@proton.me</a>.
+			</p>
+		</Section>
+	</main>
+</Layout>
