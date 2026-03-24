@@ -12,9 +12,11 @@ const { title, subtitle, text, ctaHref, ctaLabel } = Astro.props;
 
 <section class="hero">
 	<div class="hero__inner container">
-		<p class="eyebrow">{subtitle}</p>
-		<h1>{title}</h1>
-		<p class="hero__text">{text}</p>
-		<a class="button" href={ctaHref}>{ctaLabel}</a>
+		<div class="hero__content">
+			<p class="eyebrow">{subtitle}</p>
+			<h1>{title}</h1>
+			<p class="hero__text">{text}</p>
+			<a class="button" href={ctaHref}>{ctaLabel}</a>
+		</div>
 	</div>
 </section>

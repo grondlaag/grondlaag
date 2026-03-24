@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const opleidingen = (await getCollection('opleidingen')).sort(
+	(a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+---
+
+<Layout
+	title="opleidingen | grondlaag"
+	description="Overzicht van opleidingen en sessies van grondlaag."
+>
+	<main class="listing-page container">
+		<header class="listing-header">
+			<p class="eyebrow">content</p>
+			<h1>opleidingen</h1>
+			<p class="listing-intro">Gerichte opleidingen rond werkafspraken, informatiekwaliteit en samenhang.</p>
+		</header>
+
+		<div class="listing-grid">
+			{opleidingen.map((opleiding) => (
+				<article class="listing-card">
+					<p class="listing-meta">{opleiding.data.date.toLocaleDateString('nl-BE')}</p>
+					<h2>{opleiding.data.title}</h2>
+					<p>{opleiding.data.description}</p>
+					{opleiding.data.tags && (
+						<p class="listing-tags">{opleiding.data.tags.map((tag) => `#${tag}`).join(' ')}</p>
+					)}
+				</article>
+			))}
+		</div>
+	</main>
+</Layout>

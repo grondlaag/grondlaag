@@ -1,0 +1,47 @@
+---
+const links = [
+	{ href: '/grondlaag/', label: 'home' },
+	{ href: '/grondlaag/advies', label: 'advies' },
+	{ href: '/grondlaag/opleidingen', label: 'opleidingen' },
+	{ href: '/grondlaag/allaambak', label: 'allaambak' },
+];
+
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const isLinkActive = (href: string) => {
+	const normalizedHref = href.replace(/\/$/, '') || '/';
+
+	if (normalizedHref === '/grondlaag') {
+		return currentPath === '/grondlaag';
+	}
+
+	return currentPath === normalizedHref || currentPath.startsWith(`${normalizedHref}/`);
+};
+---
+
+<header class="site-nav">
+	<div class="container site-nav__inner">
+		<a class="site-nav__brand" href="/grondlaag/">grondlaag</a>
+		<nav aria-label="hoofdnavigatie">
+			<ul class="site-nav__list">
+				{
+					links.map((link) => {
+						const isActive = isLinkActive(link.href);
+
+						return (
+							<li>
+								<a
+									class:list={['site-nav__link', { 'is-active': isActive }]}
+									href={link.href}
+									aria-current={isActive ? 'page' : undefined}
+								>
+									{link.label}
+								</a>
+							</li>
+						);
+					})
+				}
+			</ul>
+		</nav>
+	</div>
+</header>

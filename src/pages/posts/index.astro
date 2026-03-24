@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const posts = (await getCollection('posts')).sort(
+	(a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+---
+
+<Layout title="posts | grondlaag" description="Overzicht van berichten en observaties van grondlaag.">
+	<main class="listing-page container">
+		<header class="listing-header">
+			<p class="eyebrow">content</p>
+			<h1>posts</h1>
+			<p class="listing-intro">Korte stukken over structuur, documentatie en samenhang in projectwerk.</p>
+		</header>
+
+		<div class="listing-grid">
+			{posts.map((post) => (
+				<article class="listing-card">
+					<p class="listing-meta">{post.data.date.toLocaleDateString('nl-BE')}</p>
+					<h2>{post.data.title}</h2>
+					<p>{post.data.description}</p>
+					{post.data.tags && (
+						<p class="listing-tags">{post.data.tags.map((tag) => `#${tag}`).join(' ')}</p>
+					)}
+				</article>
+			))}
+		</div>
+	</main>
+</Layout>

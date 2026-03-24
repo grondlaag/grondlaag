@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const tools = (await getCollection('tools')).sort(
+	(a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+---
+
+<Layout title="tools | grondlaag" description="Overzicht van tools en praktische hulpmiddelen van grondlaag.">
+	<main class="listing-page container">
+		<header class="listing-header">
+			<p class="eyebrow">content</p>
+			<h1>tools</h1>
+			<p class="listing-intro">Praktische hulpmiddelen, kleine checks en formats voor dagelijkse projectwerking.</p>
+		</header>
+
+		<div class="listing-grid">
+			{tools.map((tool) => (
+				<article class="listing-card">
+					<p class="listing-meta">{tool.data.date.toLocaleDateString('nl-BE')}</p>
+					<h2>{tool.data.title}</h2>
+					<p>{tool.data.description}</p>
+					{tool.data.tags && (
+						<p class="listing-tags">{tool.data.tags.map((tag) => `#${tag}`).join(' ')}</p>
+					)}
+				</article>
+			))}
+		</div>
+	</main>
+</Layout>
