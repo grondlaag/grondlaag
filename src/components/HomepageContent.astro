@@ -1,0 +1,90 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleCard from './ArticleCard.astro';
+import Hero from './Hero.astro';
+import PillarCard from './PillarCard.astro';
+import Section from './Section.astro';
+
+const pillars = [
+	{
+		title: 'advies',
+		description: 'praktisch advies om digitale processen helderder, rustiger en beter bruikbaar te maken.',
+		href: '/grondlaag/advies',
+	},
+	{
+		title: 'opleidingen',
+		description: 'gerichte opleidingen voor teams die met meer samenhang en minder dubbel werk willen werken.',
+		href: '/grondlaag/opleidingen',
+	},
+	{
+		title: 'allaambak',
+		description: 'een compacte toolkit met kleine formats, checks en mini-tools voor lopende projecten.',
+		href: '/grondlaag/allaambak',
+	},
+];
+
+const latestPosts = (await getCollection('posts'))
+	.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+	.slice(0, 3);
+---
+
+<main>
+	<Hero
+		title="grondlaag"
+		subtitle="digitale structuur voor architecten"
+		text="grondlaag helpt architecten hun digitale processen helderder op te bouwen. minder ruis, minder dubbel werk, meer samenhang."
+		ctaHref="mailto:grondlaag@proton.me"
+		ctaLabel="grondlaag@proton.me"
+	/>
+
+	<Section
+		id="probleem"
+		title="waar het vaak vastloopt"
+		intro="digitale processen groeien vaak sneller dan hun structuur."
+	>
+		<div class="problem-grid">
+			<p>
+				wat logisch leek bij de start, wordt later moeilijk leesbaar, moeilijk beheerbaar en moeilijk overdraagbaar.
+			</p>
+			<p>
+				daardoor ontstaat ruis, dubbel werk en versnippering, net op de momenten waarop samenhang het meeste verschil maakt.
+			</p>
+		</div>
+	</Section>
+
+	<Section
+		id="pijlers"
+		title="de ondergrond die we aanbieden"
+		intro="grondlaag werkt vanuit drie heldere sporen die elkaar versterken in de praktijk."
+	>
+		<div class="pillar-grid">
+			{pillars.map((pillar) => <PillarCard {...pillar} />)}
+		</div>
+	</Section>
+
+	<Section
+		id="artikels"
+		title="lees onze artikels"
+		intro="korte artikels en observaties over structuur, samenhang en bruikbaarheid in de praktijk."
+	>
+		<div class="article-teaser-list">
+			{latestPosts.map((post) => (
+				<ArticleCard
+					title={post.data.title}
+					description={post.data.description}
+					href={`/grondlaag/inzichten/${post.id}/`}
+					date={post.data.date}
+				/>
+			))}
+		</div>
+		<p class="section-link">
+			<a href="/grondlaag/inzichten">bekijk alle artikels</a>
+		</p>
+	</Section>
+
+	<Section id="contact" title="Contact">
+		<p class="contact-line">
+			Neem vrijblijvend contact op via <a href="mailto:grondlaag@proton.me">grondlaag@proton.me</a>.
+		</p>
+	</Section>
+</main>

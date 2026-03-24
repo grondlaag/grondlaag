@@ -1,31 +1,32 @@
 ---
 import { getCollection } from 'astro:content';
+import ArticleCard from '../../components/ArticleCard.astro';
 import Layout from '../../layouts/Layout.astro';
+import { getExcerpt } from '../../utils/content';
 
 const posts = (await getCollection('posts')).sort(
 	(a, b) => b.data.date.getTime() - a.data.date.getTime(),
 );
 ---
 
-<Layout title="inzichten | grondlaag" description="Artikels en observaties van grondlaag.">
+<Layout title="artikels | grondlaag" description="Overzicht van artikels en observaties van grondlaag.">
 	<main class="listing-page container">
 		<header class="listing-header">
 			<p class="eyebrow">inhoud</p>
-			<h1>inzichten</h1>
+			<h1>artikels</h1>
 			<p class="listing-intro">
-				Korte artikels over model, bestek, meetstaat en documentatie in de dagelijkse praktijk.
+				Publieke pagina met korte artikels en observaties over digitale processen, samenhang en bruikbaarheid in de praktijk.
 			</p>
 		</header>
 
-		<div class="listing-grid">
+		<div class="article-listing">
 			{posts.map((post) => (
-				<a class="listing-link" href={`/grondlaag/inzichten/${post.id}/`}>
-					<article class="listing-card">
-						<p class="listing-meta">{post.data.date.toLocaleDateString('nl-BE')}</p>
-						<h2>{post.data.title}</h2>
-						<p>{post.data.description}</p>
-					</article>
-				</a>
+				<ArticleCard
+					title={post.data.title}
+					description={getExcerpt(post.body, post.data.description)}
+					href={`/grondlaag/inzichten/${post.id}/`}
+					date={post.data.date}
+				/>
 			))}
 		</div>
 	</main>

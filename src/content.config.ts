@@ -1,24 +1,30 @@
 import { glob } from 'astro/loaders';
 import { defineCollection } from 'astro:content';
-import { baseCollectionSchema } from './content/config';
+import { datedCollectionSchema, catalogueCollectionSchema } from './content/config';
 
-const posts = defineCollection({
-	loader: glob({ pattern: '**/*.md', base: './src/content/posts' }),
-	schema: baseCollectionSchema,
+const advies = defineCollection({
+	loader: glob({ pattern: '**/*.md', base: './src/content/advies' }),
+	schema: catalogueCollectionSchema,
 });
 
-const tools = defineCollection({
-	loader: glob({ pattern: '**/*.md', base: './src/content/tools' }),
-	schema: baseCollectionSchema,
+const posts = defineCollection({
+	loader: glob({ pattern: '**/*.md', base: './src/content/artikels' }),
+	schema: datedCollectionSchema,
+});
+
+const allaambak = defineCollection({
+	loader: glob({ pattern: '**/*.md', base: './src/content/allaambak' }),
+	schema: catalogueCollectionSchema,
 });
 
 const opleidingen = defineCollection({
 	loader: glob({ pattern: '**/*.md', base: './src/content/opleidingen' }),
-	schema: baseCollectionSchema,
+	schema: catalogueCollectionSchema,
 });
 
 export const collections = {
+	advies,
 	posts,
-	tools,
+	allaambak,
 	opleidingen,
 };

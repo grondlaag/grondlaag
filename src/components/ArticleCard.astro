@@ -1,0 +1,23 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	href: string;
+	date?: Date;
+	label?: string;
+}
+
+// artikels krijgen een compactere, meer editoriale kaart dan aanbodsfiches
+const { title, description, href, date, label } = Astro.props;
+---
+
+<a class="article-card" href={href}>
+	{(label || date) && (
+		<div class="article-card__topline">
+			{label && <p class="article-card__label">{label}</p>}
+			{date && <p class="article-card__date">{date.toLocaleDateString('nl-BE')}</p>}
+		</div>
+	)}
+	<h3>{title}</h3>
+	<p>{description}</p>
+</a>

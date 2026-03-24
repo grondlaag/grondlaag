@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+	const opleidingen = await getCollection('opleidingen');
+
+	return opleidingen.map((opleiding) => ({
+		params: { slug: opleiding.id },
+		props: { opleiding },
+	}));
+}
+
+const { opleiding } = Astro.props;
+const { Content } = await render(opleiding);
+---
+
+<Layout title={`${opleiding.data.title} | grondlaag`} description={opleiding.data.description}>
+	<main class="article-page container">
+		<header class="article-header">
+			<p class="eyebrow">opleidingen</p>
+			{opleiding.data.date && (
+				<p class="listing-meta">{opleiding.data.date.toLocaleDateString('nl-BE')}</p>
+			)}
+			<h1>{opleiding.data.title}</h1>
+			<p class="article-intro">{opleiding.data.description}</p>
+			<div class="catalogue-meta">
+				{opleiding.data.status && <p><span>status</span> {opleiding.data.status}</p>}
+				{opleiding.data.price && <p><span>prijs</span> {opleiding.data.price}</p>}
+				{opleiding.data.duur && <p><span>duur</span> {opleiding.data.duur}</p>}
+			</div>
+			{opleiding.data.cta_label && opleiding.data.cta_link && (
+				<p class="catalogue-cta"><a class="button" href={opleiding.data.cta_link}>{opleiding.data.cta_label}</a></p>
+			)}
+		</header>
+
+		<article class="article-body">
+			<Content />
+		</article>
+	</main>
+</Layout>

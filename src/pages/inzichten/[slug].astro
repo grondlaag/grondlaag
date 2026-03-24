@@ -18,8 +18,8 @@ const { Content } = await render(post);
 <Layout title={`${post.data.title} | grondlaag`} description={post.data.description}>
 	<main class="article-page container">
 		<header class="article-header">
-			<p class="eyebrow">inzichten</p>
-			<p class="listing-meta">{post.data.date.toLocaleDateString('nl-BE')}</p>
+			<p class="eyebrow">artikels</p>
+			{post.data.date && <p class="listing-meta">{post.data.date.toLocaleDateString('nl-BE')}</p>}
 			<h1>{post.data.title}</h1>
 			<p class="article-intro">{post.data.description}</p>
 		</header>

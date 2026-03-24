@@ -1,10 +1,26 @@
 ---
 import { getCollection } from 'astro:content';
+import ServiceCard from '../../components/ServiceCard.astro';
 import Layout from '../../layouts/Layout.astro';
+import { getExcerpt } from '../../utils/content';
 
 const opleidingen = (await getCollection('opleidingen')).sort(
-	(a, b) => b.data.date.getTime() - a.data.date.getTime(),
+	(a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0),
 );
+
+function getStatusPresentation(status?: string) {
+	switch (status?.toLowerCase()) {
+		case 'beschikbaar':
+			return { label: 'beschikbaar', tone: 'available' as const };
+		case 'volzet':
+			return { label: 'volzet', tone: 'full' as const };
+		case 'voorzien':
+		case 'binnenkort':
+			return { label: 'binnenkort', tone: 'soon' as const };
+		default:
+			return undefined;
+	}
+}
 ---
 
 <Layout
@@ -13,22 +29,25 @@ const opleidingen = (await getCollection('opleidingen')).sort(
 >
 	<main class="listing-page container">
 		<header class="listing-header">
-			<p class="eyebrow">content</p>
 			<h1>opleidingen</h1>
-			<p class="listing-intro">Gerichte opleidingen rond werkafspraken, informatiekwaliteit en samenhang.</p>
+			<p class="listing-intro">Opleidingsfiches rond werkafspraken, informatiekwaliteit en samenhang in projectwerking.</p>
 		</header>
 
-		<div class="listing-grid">
-			{opleidingen.map((opleiding) => (
-				<article class="listing-card">
-					<p class="listing-meta">{opleiding.data.date.toLocaleDateString('nl-BE')}</p>
-					<h2>{opleiding.data.title}</h2>
-					<p>{opleiding.data.description}</p>
-					{opleiding.data.tags && (
-						<p class="listing-tags">{opleiding.data.tags.map((tag) => `#${tag}`).join(' ')}</p>
-					)}
-				</article>
-			))}
+		<div class="service-grid">
+			{opleidingen.map((opleiding) => {
+				const status = getStatusPresentation(opleiding.data.status);
+
+				return (
+					<ServiceCard
+						title={opleiding.data.title}
+						description={getExcerpt(opleiding.body, opleiding.data.description)}
+						href={`/grondlaag/opleidingen/${opleiding.id}/`}
+						meta={opleiding.data.price}
+						status={status?.label}
+						statusTone={status?.tone}
+					/>
+				);
+			})}
 		</div>
 	</main>
 </Layout>

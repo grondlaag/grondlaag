@@ -1,0 +1,38 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+	const adviesItems = await getCollection('advies');
+
+	return adviesItems.map((item) => ({
+		params: { slug: item.id },
+		props: { item },
+	}));
+}
+
+const { item } = Astro.props;
+const { Content } = await render(item);
+---
+
+<Layout title={`${item.data.title} | grondlaag`} description={item.data.description}>
+	<main class="article-page container">
+		<header class="article-header">
+			<p class="eyebrow">advies</p>
+			{item.data.date && <p class="listing-meta">{item.data.date.toLocaleDateString('nl-BE')}</p>}
+			<h1>{item.data.title}</h1>
+			<p class="article-intro">{item.data.description}</p>
+			<div class="catalogue-meta">
+				{item.data.status && <p><span>status</span> {item.data.status}</p>}
+				{item.data.price && <p><span>prijs</span> {item.data.price}</p>}
+			</div>
+			{item.data.cta_label && item.data.cta_link && (
+				<p class="catalogue-cta"><a class="button" href={item.data.cta_link}>{item.data.cta_label}</a></p>
+			)}
+		</header>
+
+		<article class="article-body">
+			<Content />
+		</article>
+	</main>
+</Layout>

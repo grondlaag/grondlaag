@@ -1,30 +1,53 @@
 ---
 import { getCollection } from 'astro:content';
+import ServiceCard from '../../components/ServiceCard.astro';
 import Layout from '../../layouts/Layout.astro';
+import { getExcerpt } from '../../utils/content';
 
-const tools = (await getCollection('tools')).sort(
-	(a, b) => b.data.date.getTime() - a.data.date.getTime(),
+const items = (await getCollection('allaambak')).sort(
+	(a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0),
 );
+
+function getStatusPresentation(status?: string) {
+	switch (status?.toLowerCase()) {
+		case 'beschikbaar':
+			return { label: 'beschikbaar', tone: 'available' as const };
+		case 'volzet':
+			return { label: 'volzet', tone: 'full' as const };
+		case 'voorzien':
+		case 'binnenkort':
+		case 'in opbouw':
+			return { label: 'binnenkort', tone: 'soon' as const };
+		default:
+			return undefined;
+	}
+}
 ---
 
 <Layout title="allaambak | grondlaag" description="Overzicht van kleine tools en hulpmiddelen van grondlaag.">
 	<main class="listing-page container">
 		<header class="listing-header">
-			<p class="eyebrow">toolkit</p>
 			<h1>allaambak</h1>
 			<p class="listing-intro">
-				Een sobere verzameling van kleine hulpmiddelen, checks en formats die direct inzetbaar zijn.
+				Een verzameling van kleine hulpmiddelen, formats en mini-tools die als aparte fiches beheerd worden.
 			</p>
 		</header>
 
-		<div class="listing-grid">
-			{tools.map((tool) => (
-				<article class="listing-card">
-					<p class="listing-meta">{tool.data.date.toLocaleDateString('nl-BE')}</p>
-					<h2>{tool.data.title}</h2>
-					<p>{tool.data.description}</p>
-				</article>
-			))}
+		<div class="service-grid">
+			{items.map((item) => {
+				const status = getStatusPresentation(item.data.status);
+
+				return (
+					<ServiceCard
+						title={item.data.title}
+						description={getExcerpt(item.body, item.data.description)}
+						href={`/grondlaag/allaambak/${item.id}/`}
+						meta={item.data.price}
+						status={status?.label}
+						statusTone={status?.tone}
+					/>
+				);
+			})}
 		</div>
 	</main>
 </Layout>

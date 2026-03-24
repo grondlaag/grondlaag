@@ -1,0 +1,30 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	href: string;
+	label?: string;
+	meta?: string;
+	status?: string;
+	statusTone?: 'available' | 'full' | 'soon';
+}
+
+// aanbodspagina's gebruiken een stabielere fichekaart met subtiele metadata
+const { title, description, href, label, meta, status, statusTone } = Astro.props;
+---
+
+<a class="service-card" href={href}>
+	{label && <p class="service-card__label">{label}</p>}
+	<h2>{title}</h2>
+	<p>{description}</p>
+	{(meta || status) && (
+		<div class="service-card__footer">
+			{meta && <p class="service-card__meta">{meta}</p>}
+			{status && (
+				<p class:list={['service-card__status', statusTone && `service-card__status--${statusTone}`]}>
+					{status}
+				</p>
+			)}
+		</div>
+	)}
+</a>

@@ -2,12 +2,22 @@
 interface Props {
 	title: string;
 	description: string;
+	href?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, href } = Astro.props;
 ---
 
-<article class="pillar-card">
-	<h3>{title}</h3>
-	<p>{description}</p>
-</article>
+{
+	href ? (
+		<a class="pillar-card pillar-card--link" href={href}>
+			<h3>{title}</h3>
+			<p>{description}</p>
+		</a>
+	) : (
+		<article class="pillar-card">
+			<h3>{title}</h3>
+			<p>{description}</p>
+		</article>
+	)
+}

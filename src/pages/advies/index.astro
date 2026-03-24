@@ -1,38 +1,31 @@
 ---
+import { getCollection } from 'astro:content';
+import ServiceCard from '../../components/ServiceCard.astro';
 import Layout from '../../layouts/Layout.astro';
+import { getExcerpt } from '../../utils/content';
 
-const adviceItems = [
-	{
-		title: 'informatiestromen scherpzetten',
-		description: 'nagaan waar model, bestek, meetstaat en documentatie elkaar verliezen.',
-	},
-	{
-		title: 'werkafspraken verhelderen',
-		description: 'kleine duidelijke afspraken rond naamgeving, revisies, exports en overdracht.',
-	},
-	{
-		title: 'controlepunten inbouwen',
-		description: 'lichte checks om inconsistenties vroeger zichtbaar te maken in het proces.',
-	},
-];
+const adviceItems = (await getCollection('advies')).sort(
+	(a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0),
+);
 ---
 
 <Layout title="advies | grondlaag" description="Praktisch advies rond digitale structuur voor architecten.">
 	<main class="listing-page container">
 		<header class="listing-header">
-			<p class="eyebrow">dienst</p>
 			<h1>advies</h1>
 			<p class="listing-intro">
-				Praktisch advies voor bureaus die meer samenhang willen tussen model, bestek, meetstaat en documentatie.
+				Adviesfiches rond digitale structuur, werkafspraken en controlepunten die bruikbaar zijn in de dagelijkse praktijk.
 			</p>
 		</header>
 
-		<div class="listing-grid">
+		<div class="service-grid">
 			{adviceItems.map((item) => (
-				<article class="listing-card">
-					<h2>{item.title}</h2>
-					<p>{item.description}</p>
-				</article>
+				<ServiceCard
+					title={item.data.title}
+					description={getExcerpt(item.body, item.data.description)}
+					href={`/grondlaag/advies/${item.id}/`}
+					meta={item.data.price}
+				/>
 			))}
 		</div>
 	</main>

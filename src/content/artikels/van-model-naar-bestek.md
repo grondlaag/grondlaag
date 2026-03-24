@@ -1,6 +1,6 @@
 ---
-title: Van model naar bestek
-description: Een korte denkoefening over hoe modelinformatie beter kan doorwerken in bestekteksten.
+title: van model naar bestek
+description: een korte denkoefening over hoe modelinformatie beter kan doorwerken in documentatie.
 date: 2026-03-20
 tags:
   - model

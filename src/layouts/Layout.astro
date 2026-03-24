@@ -5,11 +5,17 @@ import Navigation from '../components/Navigation.astro';
 interface Props {
 	title?: string;
 	description?: string;
+	theme?:
+		| 'default'
+		| 'rebels-dichtbij'
+		| 'rebels-onredelijk'
+		| 'rebels-clever';
 }
 
 const {
 	title = 'Grondlaag | Digitale structuur voor architecten',
 	description = 'Grondlaag brengt digitale structuur in ontwerp-, bestek- en meetstaatprocessen voor architecten.',
+	theme = 'default',
 } = Astro.props;
 ---
 
@@ -24,7 +30,7 @@ const {
 		<meta name="description" content={description} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class:list={['site-shell', `theme-${theme}`]}>
 		<Navigation />
 		<slot />
 	</body>
