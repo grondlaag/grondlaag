@@ -4,7 +4,7 @@ import ServiceCard from '../../components/ServiceCard.astro';
 import Layout from '../../layouts/Layout.astro';
 import { getExcerpt } from '../../utils/content';
 
-const items = (await getCollection('allaambak')).sort(
+const items = (await getCollection('alaambak')).sort(
 	(a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0),
 );
 
@@ -24,10 +24,10 @@ function getStatusPresentation(status?: string) {
 }
 ---
 
-<Layout title="allaambak | grondlaag" description="Overzicht van kleine tools en hulpmiddelen van grondlaag.">
+<Layout title="alaambak | grondlaag" description="Overzicht van kleine tools en hulpmiddelen van grondlaag.">
 	<main class="listing-page container">
 		<header class="listing-header">
-			<h1>allaambak</h1>
+			<h1>alaambak</h1>
 			<p class="listing-intro">
 				Een verzameling van kleine hulpmiddelen, formats en mini-tools.
 			</p>
@@ -41,7 +41,7 @@ function getStatusPresentation(status?: string) {
 					<ServiceCard
 						title={item.data.title}
 						description={getExcerpt(item.body, item.data.description)}
-						href={`/grondlaag/allaambak/${item.id}/`}
+						href={`/grondlaag/alaambak/${item.id}/`}
 						meta={item.data.price}
 						status={status?.label}
 						statusTone={status?.tone}

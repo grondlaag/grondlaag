@@ -3,7 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
-	const items = await getCollection('allaambak');
+	const items = await getCollection('alaambak');
 
 	return items.map((item) => ({
 		params: { slug: item.id },
@@ -18,7 +18,7 @@ const { Content } = await render(item);
 <Layout title={`${item.data.title} | grondlaag`} description={item.data.description}>
 	<main class="article-page container">
 		<header class="article-header">
-			<p class="eyebrow">allaambak</p>
+			<p class="eyebrow">alaambak</p>
 			{item.data.date && <p class="listing-meta">{item.data.date.toLocaleDateString('nl-BE')}</p>}
 			<h1>{item.data.title}</h1>
 			<p class="article-intro">{item.data.description}</p>

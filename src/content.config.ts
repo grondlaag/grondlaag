@@ -12,8 +12,8 @@ const posts = defineCollection({
 	schema: datedCollectionSchema,
 });
 
-const allaambak = defineCollection({
-	loader: glob({ pattern: '**/*.md', base: './src/content/allaambak' }),
+const alaambak = defineCollection({
+	loader: glob({ pattern: '**/*.md', base: './src/content/alaambak' }),
 	schema: catalogueCollectionSchema,
 });
 
@@ -25,6 +25,6 @@ const opleidingen = defineCollection({
 export const collections = {
 	advies,
 	posts,
-	allaambak,
+	alaambak,
 	opleidingen,
 };
