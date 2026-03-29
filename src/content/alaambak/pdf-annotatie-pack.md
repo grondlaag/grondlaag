@@ -1,8 +1,7 @@
 ---
 title: grondlaag-planpin
 description: browsertool om opmerkingen rechtstreeks op een pdf-plan te plaatsen, te beheren en te exporteren.
-date: 2026-03-24
-order: 2
+order: 1
 accent: true
 category: alaam
 tags:

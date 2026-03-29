@@ -1,8 +1,7 @@
 ---
 title: opensource
 description: een selectie van onze favoriete opensource en alternatieve tools.
-date: 2026-03-29
-order: 1
+order: 2
 accent: true
 category: alaam
 tags:
