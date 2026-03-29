@@ -14,6 +14,12 @@ cta_label: aanpassen voor eigen doeleinden?
 cta_link: mailto:grondlaag@proton.me?subject=pdf%20annotatie%20pack
 ---
 
+## PlanPin
+Gebruik de webtool hier:
+[PlanPin openen](https://grondlaag.github.io/grondlaag-pdf-pin/app)
+
+
+
 Een lichte browserapp om plannen of andere pdf's te reviewen met duidelijke, plaatsgebonden opmerkingen.
 
 Je uploadt een pdf, klikt rechtstreeks op het plan om een markering te zetten, en vult per opmerking titel, commentaar, categorie, status, prioriteit en referentie in. Per opmerking kunnen ook afbeeldingen worden opgeladen om situaties, details of referenties mee te sturen. Zo blijft feedback gekoppeld aan de exacte plek op de tekening, in plaats van verspreid te raken over mails, screenshots of losse notities.
