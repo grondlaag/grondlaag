@@ -1,5 +1,5 @@
 ---
-title: pdf annotatie pack
+title: grondlaag-planpin
 description: browsertool om opmerkingen rechtstreeks op een pdf-plan te plaatsen, te beheren en te exporteren.
 date: 2026-03-24
 order: 2
@@ -16,7 +16,7 @@ cta_link: mailto:grondlaag@proton.me?subject=pdf%20annotatie%20pack
 
 ## PlanPin
 Gebruik de webtool hier:
-[PlanPin openen](https://grondlaag.github.io/grondlaag-pdf-pin/app)
+## [PlanPin openen](https://grondlaag.github.io/grondlaag-pdf-pin/app)
 
 
 
