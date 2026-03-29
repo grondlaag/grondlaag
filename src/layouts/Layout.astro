@@ -33,5 +33,18 @@ const {
 	<body class:list={['site-shell', `theme-${theme}`]}>
 		<Navigation />
 		<slot />
+		<footer class="site-footer">
+			<div class="container site-footer__inner">
+				<p class="site-footer__note">
+					grondlaag verwerkt contact- en boekingsgegevens alleen voor contact, opvolging en planning.
+					boekingen verlopen via <a href="https://cal.eu/grondlaag/snelle-babbel">Cal</a>.
+					betalingen verlopen, indien van toepassing, via een externe partner.
+				</p>
+				<div class="site-footer__links" aria-label="footer">
+					<a href="/grondlaag/privacy">privacy</a>
+					<a href="mailto:grondlaag@proton.me">contact</a>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
