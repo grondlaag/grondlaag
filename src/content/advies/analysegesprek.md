@@ -1,11 +1,14 @@
 ---
 title: analysegesprek
 description: eerste blik op je digitale werking en waar het begint te wringen.
+order: 1
+accent: false
+category: verkenning
 tags:
   - advies
   - analyse
 status: beschikbaar
-price: €200
+price: €180
 cta_label: plan een analysegesprek
 cta_link: mailto:grondlaag@proton.me?subject=analysegesprek%20grondlaag
 featured: true

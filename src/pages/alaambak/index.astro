@@ -2,11 +2,9 @@
 import { getCollection } from 'astro:content';
 import ServiceCard from '../../components/ServiceCard.astro';
 import Layout from '../../layouts/Layout.astro';
-import { getExcerpt } from '../../utils/content';
+import { getExcerpt, sortByManualOrder } from '../../utils/content';
 
-const items = (await getCollection('alaambak')).sort(
-	(a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0),
-);
+const items = sortByManualOrder(await getCollection('alaambak'));
 
 function getStatusPresentation(status?: string) {
 	switch (status?.toLowerCase()) {
@@ -29,7 +27,7 @@ function getStatusPresentation(status?: string) {
 		<header class="listing-header">
 			<h1>alaambak</h1>
 			<p class="listing-intro">
-				Een verzameling van kleine hulpmiddelen, formats en mini-tools.
+				Kleine hulpmiddelen en eenvoudige tools. Geen grote systemen, maar compacte ingrepen die iets duidelijker, sneller of leesbaarder maken in de praktijk. Wat hier zit, is meestal klein. Maar net daarom bruikbaar.
 			</p>
 		</header>
 
@@ -43,8 +41,10 @@ function getStatusPresentation(status?: string) {
 						description={getExcerpt(item.body, item.data.description)}
 						href={`/grondlaag/alaambak/${item.id}/`}
 						meta={item.data.price}
+						category={item.data.category}
 						status={status?.label}
 						statusTone={status?.tone}
+						accent={item.data.accent}
 					/>
 				);
 			})}

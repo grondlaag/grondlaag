@@ -4,17 +4,22 @@ interface Props {
 	description: string;
 	href: string;
 	label?: string;
+	category?: string;
 	meta?: string;
 	status?: string;
 	statusTone?: 'available' | 'full' | 'soon';
+	accent?: boolean;
 }
 
 // aanbodspagina's gebruiken een stabielere fichekaart met subtiele metadata
-const { title, description, href, label, meta, status, statusTone } = Astro.props;
+const { title, description, href, label, category, meta, status, statusTone, accent } = Astro.props;
 ---
 
-<a class="service-card" href={href}>
+<!-- Accent voegt een extra kaartklasse toe voor subtiele visuele nadruk. -->
+<a class:list={['service-card', accent && 'service-card--accent']} href={href}>
 	{label && <p class="service-card__label">{label}</p>}
+	{/* Category wordt als klein label boven de titel getoond wanneer aanwezig. */}
+	{category && <p class="service-card__category">{category}</p>}
 	<h2>{title}</h2>
 	<p>{description}</p>
 	{(meta || status) && (

@@ -8,17 +8,17 @@ import Section from './Section.astro';
 const pillars = [
 	{
 		title: 'advies',
-		description: 'praktisch advies om digitale processen helderder, rustiger en beter bruikbaar te maken.',
+		description: 'gerichte ondersteuning voor architecten en ontwerpteams die vastlopen in digitale structuur, workflows of keuzes rond tools.',
 		href: '/grondlaag/advies',
 	},
 	{
 		title: 'opleidingen',
-		description: 'gerichte opleidingen voor teams die met meer samenhang en minder dubbel werk willen werken.',
+		description: 'praktische opleidingen voor teams die met meer samenhang, duidelijkere afspraken en minder dubbel werk willen werken.',
 		href: '/grondlaag/opleidingen',
 	},
 	{
 		title: 'alaambak',
-		description: 'een compacte toolkit met kleine formats, checks en mini-tools voor lopende projecten.',
+		description: 'een compacte verzameling van formats, checks en kleine tools die meteen bruikbaar zijn in lopende projecten.',
 		href: '/grondlaag/alaambak',
 	},
 ];
@@ -31,31 +31,30 @@ const latestPosts = (await getCollection('posts'))
 <main>
 	<Hero
 		title="grondlaag"
-		subtitle="digitale structuur voor architecten"
-		text="grondlaag helpt architecten hun digitale processen helderder op te bouwen. minder ruis, minder dubbel werk, meer samenhang."
+		subtitle="digitale structuur voor architecten en ontwerpteams"
+		text="grondlaag wordt opgebouwd door een architect en een data-architect. we helpen architecten en ontwerpteams om digitale processen, informatie en tools helderder te structureren."
 		ctaHref="mailto:grondlaag@proton.me"
 		ctaLabel="grondlaag@proton.me"
+		secondaryCtaHref="https://cal.eu/grondlaag/snelle-babbel"
+		secondaryCtaLabel="boek een snelle babbel"
 	/>
 
 	<Section
 		id="probleem"
 		title="waar het vaak vastloopt"
-		intro="digitale processen groeien vaak sneller dan hun structuur."
 	>
-		<div class="problem-grid">
+		<div class="problem-text">
 			<p>
-				wat logisch leek bij de start, wordt later moeilijk leesbaar, moeilijk beheerbaar en moeilijk overdraagbaar.
-			</p>
-			<p>
-				daardoor ontstaat ruis, dubbel werk en versnippering, net op de momenten waarop samenhang het meeste verschil maakt.
+			in veel projecten groeien modellen, documenten en tools sneller dan de structuur die ze zou moeten dragen.
+			vanuit architectuur en data-architectuur zien we vaak dezelfde problemen terugkomen: versnipperde informatie, onduidelijke afspraken en systemen die moeilijk leesbaar, bruikbaar of overdraagbaar worden. dat leidt tot ruis, dubbel werk en tijdverlies, net op de momenten waarop helderheid en samenhang het meeste verschil maken.
 			</p>
 		</div>
 	</Section>
 
 	<Section
 		id="pijlers"
-		title="de ondergrond die we aanbieden"
-		intro="grondlaag werkt vanuit drie heldere sporen die elkaar versterken in de praktijk."
+		title="hoe we helpen"
+		intro="grondlaag werkt vanuit drie sporen die elkaar versterken in de praktijk."
 	>
 		<div class="pillar-grid">
 			{pillars.map((pillar) => <PillarCard {...pillar} />)}
@@ -65,7 +64,7 @@ const latestPosts = (await getCollection('posts'))
 	<Section
 		id="artikels"
 		title="lees onze artikels"
-		intro="korte artikels en observaties over structuur, samenhang en bruikbaarheid in de praktijk."
+		intro="korte artikels en observaties over structuur, samenwerking en bruikbaarheid in de dagelijkse praktijk van ontwerp en bouw."
 	>
 		<div class="article-teaser-list">
 			{latestPosts.map((post) => (
@@ -82,9 +81,34 @@ const latestPosts = (await getCollection('posts'))
 		</p>
 	</Section>
 
-	<Section id="contact" title="Contact">
+<Section
+	id="wie"
+	title="wie zijn we"
+	intro="grondlaag brengt ervaring uit architectuur en data-architectuur samen."
+>
+	<div class="about-text">
+		<p>
+			grondlaag wordt opgebouwd door een architect en een data-architect, elk met een eigen achtergrond maar met een gedeelde focus op structuur en samenhang.
+		</p>
+
+		<p>
+			vanuit architectuur komt ervaring in ontwerp, BIM en coördinatie van complexe projecten, waar modellen, plannen en documenten helder moeten blijven doorheen verschillende fases en teams.
+		</p>
+
+		<p>
+			de rol van data-architect komt uit de IT-wereld en focust op hoe informatie wordt opgebouwd, gestructureerd en gebruikt binnen systemen. die manier van denken wordt toegepast op de bouwpraktijk, waar dezelfde problemen rond structuur en samenhang vaak terugkomen.
+		</p>
+
+		<p>
+			die combinatie maakt het mogelijk om problemen niet alleen te herkennen, maar ook gericht op te lossen binnen lopende projecten.
+		</p>
+	</div>
+</Section>
+
+
+	<Section id="contact" title="contact">
 		<p class="contact-line">
-			Neem vrijblijvend contact op via <a href="mailto:grondlaag@proton.me">grondlaag@proton.me</a>.
+			neem vrijblijvend contact op via <a href="mailto:grondlaag@proton.me">grondlaag@proton.me</a> of <a href="https://cal.eu/grondlaag/snelle-babbel">boek een snelle babbel</a>.
 		</p>
 	</Section>
 </main>

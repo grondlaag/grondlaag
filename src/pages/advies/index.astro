@@ -2,11 +2,9 @@
 import { getCollection } from 'astro:content';
 import ServiceCard from '../../components/ServiceCard.astro';
 import Layout from '../../layouts/Layout.astro';
-import { getExcerpt } from '../../utils/content';
+import { getExcerpt, sortByManualOrder } from '../../utils/content';
 
-const adviceItems = (await getCollection('advies')).sort(
-	(a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0),
-);
+const adviceItems = sortByManualOrder(await getCollection('advies'));
 ---
 
 <Layout title="advies | grondlaag" description="Praktisch advies rond digitale structuur voor architecten.">
@@ -14,7 +12,7 @@ const adviceItems = (await getCollection('advies')).sort(
 		<header class="listing-header">
 			<h1>advies</h1>
 			<p class="listing-intro">
-				Adviesfiches rond digitale structuur, werkafspraken en controlepunten die bruikbaar zijn in de dagelijkse praktijk.
+				Gerichte begeleiding rond je digitale werking. We kijken naar hoe informatie vandaag wordt opgebouwd, gebruikt en doorgegeven, en waar samenhang ontbreekt. Niet als theorie, maar als basis voor concrete ingrepen.
 			</p>
 		</header>
 
@@ -25,6 +23,8 @@ const adviceItems = (await getCollection('advies')).sort(
 					description={getExcerpt(item.body, item.data.description)}
 					href={`/grondlaag/advies/${item.id}/`}
 					meta={item.data.price}
+					category={item.data.category}
+					accent={item.data.accent}
 				/>
 			))}
 		</div>

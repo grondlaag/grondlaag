@@ -1,6 +1,9 @@
 ---
 title: huur een nerd
 description: gerichte ingrepen in je digitale werking, zonder extra ruis.
+order: 2
+accent: true
+category: uitvoering
 tags:
   - advies
   - uitvoering

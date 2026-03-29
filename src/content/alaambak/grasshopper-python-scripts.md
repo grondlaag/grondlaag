@@ -1,6 +1,8 @@
 ---
 title: grasshopper python scripts
 description: kleine scripts voor terugkerende taken, controles en gerichte automatisatie in grasshopper.
+order: 6
+category: script
 tags:
   - grasshopper
   - python

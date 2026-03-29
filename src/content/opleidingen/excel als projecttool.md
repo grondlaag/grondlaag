@@ -1,14 +1,16 @@
 ---
 title: excel voor architecten
 description: een praktische sessie over lijsten, meetstaten en controle, en over waarom excel in projecten telkens blijft terugkomen.
+order: 3
+category: structuur
 tags:
   - opleiding
   - excel
   - meetstaat
   - controle
-status: binnenkort
-price: op aanvraag
-duur: nog te bepalen
+status: beschikbaar
+price: €110
+duur: 2 uur
 cta_label: toon interesse
 cta_link: mailto:grondlaag@proton.me?subject=interesse%20excel-voor-architecten
 ---

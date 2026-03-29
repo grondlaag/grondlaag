@@ -1,6 +1,8 @@
 ---
 title: obsidian templates
 description: herbruikbare notitiesjablonen voor projectinformatie, overleg en digitale werkafspraken.
+order: 5
+category: template
 tags:
   - obsidian
   - templates

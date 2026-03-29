@@ -1,6 +1,8 @@
 ---
 title: buda bestekstructuur
 description: een werkbare basis om bestekinformatie consequenter te ordenen en leesbaar te houden.
+order: 4
+category: structuur
 tags:
   - bestek
   - structuur

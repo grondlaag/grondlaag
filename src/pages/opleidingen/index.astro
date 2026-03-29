@@ -2,11 +2,9 @@
 import { getCollection } from 'astro:content';
 import ServiceCard from '../../components/ServiceCard.astro';
 import Layout from '../../layouts/Layout.astro';
-import { getExcerpt } from '../../utils/content';
+import { getExcerpt, sortByManualOrder } from '../../utils/content';
 
-const opleidingen = (await getCollection('opleidingen')).sort(
-	(a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0),
-);
+const opleidingen = sortByManualOrder(await getCollection('opleidingen'));
 
 function getStatusPresentation(status?: string) {
 	switch (status?.toLowerCase()) {
@@ -30,7 +28,7 @@ function getStatusPresentation(status?: string) {
 	<main class="listing-page container">
 		<header class="listing-header">
 			<h1>opleidingen</h1>
-			<p class="listing-intro">Opleidingsfiches rond werkafspraken, informatiekwaliteit en samenhang in projectwerking.</p>
+			<p class="listing-intro">Gerichte avondsessies rond afgebakende thema’s. Geen brede opleidingen, maar specifieke onderwerpen die vaak impliciet blijven in projectwerking. We maken zichtbaar hoe ze werken en hoe je er bewuster mee omgaat.</p>
 		</header>
 
 		<div class="service-grid">
@@ -43,8 +41,10 @@ function getStatusPresentation(status?: string) {
 						description={getExcerpt(opleiding.body, opleiding.data.description)}
 						href={`/grondlaag/opleidingen/${opleiding.id}/`}
 						meta={opleiding.data.price}
+						category={opleiding.data.category}
 						status={status?.label}
 						statusTone={status?.tone}
+						accent={opleiding.data.accent}
 					/>
 				);
 			})}

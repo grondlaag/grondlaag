@@ -1,6 +1,8 @@
 ---
 title: grondlaag analyse
 description: gerichte analyse van je digitale werking met concrete voorstellen voor structuur en samenhang.
+order: 3
+category: analyse
 tags:
   - advies
   - analyse
@@ -35,4 +37,3 @@ De output is compact en bruikbaar:
 geen uitgebreide rapporten, maar een duidelijke richting en een aantal ingrepen die onmiddellijk toepasbaar zijn.
 
 Deze analyse is vaak het kantelpunt tussen “we voelen dat het niet klopt” en “we weten waar we moeten beginnen”.
-
