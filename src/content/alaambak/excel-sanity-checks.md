@@ -1,7 +1,6 @@
 ---
 title: excel sanity checks
 description: snelle controles op totalen, dubbele regels en ontbrekende posten.
-date: 2026-03-21
 order: 3
 category: template
 tags:

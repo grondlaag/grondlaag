@@ -1,8 +1,8 @@
 ---
 title: folderstructuren basis template
 description: een rustige basisstructuur voor projectmappen die leesbaar blijft en overdraagbaar is.
-order: 1
-accent: true
+order: 4
+accent: false
 category: template
 tags:
   - mappen

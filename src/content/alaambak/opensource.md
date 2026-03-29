@@ -2,12 +2,12 @@
 title: opensource
 description: een selectie van onze favoriete opensource en alternatieve tools.
 order: 2
-accent: true
+accent: false
 category: alaam
 tags:
   - opensource
   - tools
-status: beschikbaar
+status: binnenkort
 price: gratis
 cta_label: meer info
 cta_link: mailto:grondlaag@proton.me?subject=pdf%20annotatie%20pack
