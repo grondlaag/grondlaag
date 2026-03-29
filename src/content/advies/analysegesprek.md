@@ -11,6 +11,8 @@ status: beschikbaar
 price: €180
 cta_label: plan een analysegesprek
 cta_link: mailto:grondlaag@proton.me?subject=analysegesprek%20grondlaag
+secondary_cta_label: boek analysegesprek
+secondary_cta_link: https://cal.eu/grondlaag/analysegesprek
 featured: true
 ---
 

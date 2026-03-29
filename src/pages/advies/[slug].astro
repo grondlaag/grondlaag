@@ -26,9 +26,20 @@ const { Content } = await render(item);
 				{item.data.status && <p><span>status</span> {item.data.status}</p>}
 				{item.data.price && <p><span>prijs</span> {item.data.price}</p>}
 			</div>
-			{item.data.cta_label && item.data.cta_link && (
-				<p class="catalogue-cta"><a class="button" href={item.data.cta_link}>{item.data.cta_label}</a></p>
-			)}
+			{(item.data.cta_label && item.data.cta_link) || (item.data.secondary_cta_label && item.data.secondary_cta_link) ? (
+				<div class="catalogue-cta-group">
+					{item.data.cta_label && item.data.cta_link && (
+						<p class="catalogue-cta"><a class="button" href={item.data.cta_link}>{item.data.cta_label}</a></p>
+					)}
+					{item.data.secondary_cta_label && item.data.secondary_cta_link && (
+						<p class="catalogue-cta">
+							<a class="button button--secondary" href={item.data.secondary_cta_link}>
+								{item.data.secondary_cta_label}
+							</a>
+						</p>
+					)}
+				</div>
+			) : null}
 		</header>
 
 		<article class="article-body">

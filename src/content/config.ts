@@ -20,6 +20,8 @@ export const catalogueCollectionSchema = z.object({
 	duur: z.string().optional(),
 	cta_label: z.string().optional(),
 	cta_link: z.string().optional(),
+	secondary_cta_label: z.string().optional(),
+	secondary_cta_link: z.string().optional(),
 	pdf: z.string().optional(),
 	featured: z.boolean().optional(),
 });
