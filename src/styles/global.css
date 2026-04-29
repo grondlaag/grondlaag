@@ -1,14 +1,14 @@
 :root {
-  --ds-color-paper: #f4f0e6;
-  --ds-color-panel: #e6dfd1;
-  --ds-color-elevated: #fffaf0;
-  --ds-color-ink: #171714;
-  --ds-color-ink-soft: #4a463f;
-  --ds-color-ink-muted: #736b5d;
-  --ds-color-line: #cfc4b1;
-  --ds-color-line-strong: #8f846f;
-  --ds-color-hero: #f0c63f;
-  --ds-color-marker-wash: #f6e59a;
+	--ds-color-paper: #f6f4ef;
+	--ds-color-panel: #ece9e2;
+	--ds-color-elevated: #fffdf9;
+	--ds-color-ink: #2b2b2b;
+	--ds-color-ink-soft: #6a6a6a;
+	--ds-color-ink-muted: #8a877f;
+	--ds-color-line: #d6d2c8;
+	--ds-color-line-strong: #b8b3a8;
+	--ds-color-hero: #f2d96b;
+	--ds-color-marker-wash: #f7edb0;
   --ds-color-transparent: transparent;
 
   --ds-bg-page: var(--ds-color-paper);
