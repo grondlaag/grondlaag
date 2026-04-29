@@ -3,7 +3,7 @@ title: analysegesprek
 description: eerste blik op je digitale werking en waar het begint te wringen.
 order: 1
 accent: false
-category: verkenning
+category: start
 tags:
   - advies
   - analyse
@@ -18,15 +18,18 @@ featured: true
 
 een eerste gesprek om scherp te krijgen waar het vastloopt.
 
-in veel kantoren groeit de digitale werking geleidelijk. nieuwe tools, nieuwe projecten en nieuwe afspraken komen erbij, maar de onderliggende structuur blijft vaak impliciet. wat ooit logisch was, wordt moeilijk leesbaar.
+in veel kantoren groeit de digitale werking geleidelijk. mappenstructuren, modellen, bestekken en tools evolueren per project, maar de onderliggende logica wordt zelden expliciet gemaakt. wat ooit werkbaar was, wordt moeilijk leesbaar en lastig overdraagbaar.
 
-tijdens het analysegesprek kijken we samen naar hoe informatie vandaag door het project stroomt. niet in detail, maar net voldoende om te zien waar ruis ontstaat, waar dingen dubbel gebeuren en waar samenhang ontbreekt.
+tijdens het analysegesprek kijken we samen naar hoe informatie vandaag door je projecten loopt. waar ontstaat ruis? waar gebeurt werk dubbel? waar sluiten modellen, documenten en afspraken niet meer op elkaar aan?
 
-de focus ligt op inzicht. geen uitgebreide analyse, geen rapport, maar een heldere eerste lezing van de situatie.
+we gaan niet in detail, maar net diep genoeg om de belangrijkste knelpunten zichtbaar te maken.
+
+de focus ligt op inzicht. geen uitgebreide analyse, geen rapport, maar een heldere eerste lezing van je werking.
 
 na dit gesprek heb je:
-- zicht op de belangrijkste knelpunten
-- een beter begrip van waar structuur ontbreekt
-- een eerste richting om verder te werken
 
-dit gesprek is vaak voldoende om kleine ingrepen te doen die meteen effect hebben. in andere gevallen vormt het de basis voor een verdere analyse of samenwerking.
+- zicht op waar het vandaag wringt  
+- een beter begrip van waar structuur ontbreekt  
+- een duidelijke richting om verder te werken  
+
+vaak volstaat dit gesprek om kleine ingrepen te doen die meteen effect hebben. in andere gevallen vormt het de basis voor een gerichte analyse of verdere samenwerking.

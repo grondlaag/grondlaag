@@ -21,9 +21,9 @@ bestanden staan verspreid, notities leven op verschillende plekken, en eenvoudig
 
 deze sessie vertrekt niet vanuit tools, maar vanuit ordening.
 
-wat hoort waar thuis.  
-wanneer is iets een werkdocument, en wanneer wordt het referentie.  
-welke stappen voegen iets toe, en welke zorgen vooral voor ruis.
+- wat hoort waar thuis.  
+- wanneer is iets een werkdocument, en wanneer wordt het referentie.  
+- welke stappen voegen iets toe, en welke zorgen vooral voor ruis.
 
 we bekijken hoe eenvoudige structuren rust kunnen brengen in een projectomgeving zonder alles te willen herdenken.
 

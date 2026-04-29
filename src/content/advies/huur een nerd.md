@@ -1,9 +1,9 @@
 ---
 title: huur een nerd
 description: gerichte ingrepen in je digitale werking, zonder extra ruis.
-order: 2
+order: 3
 accent: true
-category: uitvoering
+category: ingreep
 tags:
   - advies
   - uitvoering
@@ -18,15 +18,17 @@ soms is inzicht niet genoeg.
 
 je weet waar het vastloopt, maar het vraagt tijd en focus om de juiste ingrepen effectief door te voeren.
 
-"huur een nerd" betekent dat ik gericht werk op je digitale werking, zonder mee te draaien in productie. geen extra handen op de werf, geen tekenwerk, maar ingrepen op het systeem zelf.
+"huur een nerd" betekent dat we werken op je digitale werking zelf, niet in je productie. geen extra tekenwerk, geen tijdelijke versterking, maar gerichte ingrepen in hoe je projecten zijn opgebouwd.
 
-dat kan gaan van:
-het opzetten of herstructureren van een duidelijke digitale basis,  
-het vereenvoudigen van bestaande workflows,  
-tot het uitwerken van kleine tools of scripts die repetitief werk wegnemen.
+dat kan gaan over:
 
-de focus ligt op wat blijft. niet op tijdelijke ondersteuning, maar op structurele verbetering.
+- het opzetten of herstructureren van een duidelijke digitale basis  
+- het vereenvoudigen van bestaande workflows  
+- het afstemmen van model, documenten en besteklogica  
+- het uitwerken van kleine tools of scripts die repetitief werk wegnemen  
 
-het werk gebeurt meestal op afstand, in korte, gerichte blokken. afstemming gebeurt wanneer nodig, maar zonder dat het dagelijkse werking verstoort.
+de focus ligt op wat blijft. geen tijdelijke oplossing, maar structurele verbetering die ook werkt zonder mij.
+
+het werk gebeurt meestal op afstand, in korte en gerichte blokken. afstemming gebeurt wanneer nodig, zonder dat het de dagelijkse werking vertraagt.
 
 voor kantoren die weten waar het wringt, en vooral willen dat het opgelost wordt.

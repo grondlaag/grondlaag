@@ -24,5 +24,3 @@ kleiner, eenvoudiger, soms minder afgewerkt, maar vaak verrassend bruikbaar in d
 dit is een selectie van tools die we zelf gebruiken of getest hebben. geen volledige lijst, maar wat werkt.
 
 voor wie minder afhankelijk wil zijn van grote systemen, en liever zelf kiest wat blijft.
-
-## grafische software

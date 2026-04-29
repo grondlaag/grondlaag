@@ -3,4 +3,8 @@ title: advies
 description: praktisch advies rond digitale structuur voor architecten.
 ---
 
-gerichte begeleiding rond je digitale werking. we kijken naar hoe informatie vandaag wordt opgebouwd, gebruikt en doorgegeven, en waar samenhang ontbreekt. niet als theorie, maar als basis voor concrete ingrepen.
+gerichte begeleiding voor architecten- en ontwerpteams die vastlopen in hun digitale werking.
+
+we zoeken waar informatie versnippert, dubbel werk ontstaat of afspraken moeilijk overdraagbaar worden.
+
+geen extra systeem, maar heldere ingrepen in de onderlaag: structuur, workflows en kleine tools.

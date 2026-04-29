@@ -8,24 +8,22 @@ tags:
   - Rhino
   - Revit
   - BIM
-status: beschikbaar
+status: binnenkort
 price: €180
 duur: 3 uur
-cta_label: schrijf je in
+cta_label: toon interesse
 cta_link: mailto:grondlaag@proton.me?subject=inschrijving%20rhino-inside-revit
 ---
 
-deze sessie is een eerste in een reeks rond gespecialiseerde tools.
+Rhino.Inside.Revit belooft een directe koppeling tussen geometrie en BIM.
 
-ze richt zich niet op algemene werking, maar op een specifieke koppeling: Rhino.Inside.Revit.
+in de praktijk is die koppeling vaak minder stabiel dan verwacht.
 
-de belofte is eenvoudig: geometrie rechtstreeks vertalen naar een BIM-model. in de praktijk is dat vaak minder evident.
+deze sessie vertrekt niet vanuit demo’s, maar vanuit toepassingen in projecten.
 
-deze sessie vertrekt vanuit concrete toepassingen, niet vanuit demo’s.
-
-hoe zet je geometrie om naar Revit-elementen die bruikbaar blijven.  
-wanneer werkt die koppeling, en wanneer wordt ze fragiel.  
-en hoe gebruik je dit in een projectcontext zonder extra complexiteit binnen te brengen.
+- hoe zet je geometrie om naar Revit-elementen die bruikbaar blijven.  
+- wanneer werkt de koppeling, en wanneer wordt ze instabiel.  
+- en hoe gebruik je dit zonder extra complexiteit binnen te brengen in je project.
 
 ### wat komt aan bod
 
@@ -36,11 +34,11 @@ en hoe gebruik je dit in een projectcontext zonder extra complexiteit binnen te 
 - typische fouten en instabiliteit in de koppeling  
 - wanneer Rhino.Inside een meerwaarde is, en wanneer niet  
 
-de voorbeelden zijn concreet en gericht op herkenbare situaties binnen ontwerp- en vergunningsdossiers.
+de voorbeelden zijn concreet en gebaseerd op herkenbare situaties in ontwerp- en vergunningsdossiers.
 
 ### hoe de sessie verloopt
 
-de sessie duurt twee uur en verloopt online in kleine groep.
+de sessie duurt drie uur en verloopt online in kleine groep.
 
 we werken met een beperkt aantal uitgewerkte voorbeelden die stap voor stap worden overlopen. er is ruimte voor korte vragen, maar geen uitwerking van individuele scripts of modellen.
 
@@ -48,7 +46,7 @@ de focus ligt op inzicht in de koppeling en de logica erachter, niet op het voll
 
 ### voor wie
 
-voor architecten en ontwerpers die werken met Rhino en Revit, en de koppeling willen begrijpen en correct inzetten.
+voor architecten en ontwerpers die werken met Rhino en Revit en de koppeling beter willen begrijpen.
 
 voor wie al ervaring heeft met minstens één van beide tools.
 

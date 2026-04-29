@@ -7,18 +7,18 @@ import Section from './Section.astro';
 
 const pillars = [
 	{
-		title: 'advies',
-		description: 'gerichte ondersteuning voor architecten en ontwerpteams die vastlopen in digitale structuur, workflows of keuzes rond tools.',
+		title: '1. advies',
+		description: 'gerichte hulp bij digitale knopen: mappenstructuren, modelafspraken, besteklogica, informatiebeheer, toolkeuzes en vastgelopen workflows.',
 		href: '/grondlaag/advies',
 	},
 	{
-		title: 'opleidingen',
-		description: 'praktische opleidingen voor teams die met meer samenhang, duidelijkere afspraken en minder dubbel werk willen werken.',
+		title: '2. opleidingen',
+		description: 'praktische sessies voor ontwerpteams die beter willen samenwerken met modellen, documenten, data en afspraken die ook na de opleiding bruikbaar blijven.',
 		href: '/grondlaag/opleidingen',
 	},
 	{
-		title: 'alaambak',
-		description: 'een compacte verzameling van formats, checks en kleine tools die meteen bruikbaar zijn in lopende projecten.',
+		title: '3. alaambak',
+		description: 'geen platform, geen dashboard, geen belofte van totale controle. wel formats, checks en kleine tools die een concreet probleem oplossen.',
 		href: '/grondlaag/alaambak',
 	},
 ];
@@ -32,7 +32,8 @@ const latestPosts = (await getCollection('posts'))
 	<Hero
 		title="grondlaag"
 		subtitle="digitale structuur voor architecten en ontwerpteams"
-		text="grondlaag wordt opgebouwd door een architect en een data-architect. we helpen architecten en ontwerpteams om digitale processen, informatie en tools helderder te structureren."
+		text="grondlaag helpt kleine en middelgrote architecten- en ontwerpteams om digitale werkprocessen leesbaar, overdraagbaar en bruikbaar te maken."
+		textSecond="niet door er nog een zwaar systeem bovenop te zetten, maar door de onderlaag helder te krijgen: afspraken, informatie, mappen, modellen, documenten en kleine tools."
 		ctaHref="mailto:grondlaag@proton.me"
 		ctaLabel="grondlaag@proton.me"
 		secondaryCtaHref="https://cal.eu/grondlaag/snelle-babbel"
@@ -45,16 +46,46 @@ const latestPosts = (await getCollection('posts'))
 	>
 		<div class="problem-text">
 			<p>
-				in veel projecten groeien modellen, documenten en tools sneller dan de structuur die ze zou moeten dragen.
-				vanuit architectuur en data-architectuur zien we vaak dezelfde problemen terugkomen: versnipperde informatie, onduidelijke afspraken en systemen die moeilijk leesbaar, bruikbaar of overdraagbaar worden. dat leidt tot ruis, dubbel werk en tijdverlies, net op de momenten waarop helderheid en samenhang het meeste verschil maken.
+				in veel ontwerpteams ontstaan digitale problemen niet door een gebrek aan inzet,
+				maar door een gebrek aan gedeelde structuur. bestanden krijgen verschillende logica's,
+				modellen groeien volgens projectdruk, afspraken zitten verspreid in mails en kennis blijft te vaak in hoofden hangen.
+			</p>
+
+			<p>
+				daardoor wordt samenwerken moeilijker dan nodig: informatie is moeilijk terug te vinden,
+				beslissingen zijn slecht traceerbaar, modellen worden broos en kleine fouten keren telkens terug.
+				grondlaag vertrekt vanuit die dagelijkse frictie.
 			</p>
 		</div>
 	</Section>
 
 	<Section
+		id="aanpak"
+		title="eerst de grondlaag"
+	>
+		<div class="problem-text">
+			<p>
+				grondlaag vertrekt niet vanuit één softwarepakket of één vaste methode.
+				de vraag is eerst: welke informatie moet betrouwbaar blijven,
+				wie moet ermee werken en op welk moment in het project moet ze bruikbaar zijn?
+			</p>
+
+			<p>
+				pas daarna komen mappenstructuren, modelafspraken, besteklogica, spreadsheets,
+				markdownbestanden, kleine webtools of automatisering in beeld.
+				de tool volgt de structuur, niet omgekeerd.
+
+				concreet kan dat betekenen dat we een team helpen om van zeven verschillende mappenstructuren naar één herkenbare projectstructuur te gaan. 
+				of dat we BIM-afspraken, besteknummers en meetstaatlogica beter op elkaar afstemmen, zodat informatie niet telkens opnieuw geïnterpreteerd moet worden.
+			</p>
+
+		</div>
+	</Section>
+
+	<Section
 		id="pijlers"
-		title="hoe we helpen"
-		intro="grondlaag werkt vanuit drie sporen die elkaar versterken in de praktijk."
+		title="hoe we hier op ingrijpen"
+		intro="grondlaag werkt op drie niveaus: directe hulp wanneer een project vastloopt, opleiding zodat teams zelf sterker worden, en kleine hulpmiddelen die structuur tastbaar maken."
 	>
 		<div class="pillar-grid">
 			{pillars.map((pillar) => <PillarCard {...pillar} />)}
@@ -63,8 +94,8 @@ const latestPosts = (await getCollection('posts'))
 
 	<Section
 		id="artikels"
-		title="lees onze artikels"
-		intro="korte artikels en observaties over structuur, samenwerking en bruikbaarheid in de dagelijkse praktijk van ontwerp en bouw."
+		title="notities uit de praktijk"
+		intro="korte teksten over digitale structuur, samenwerking, BIM, bestekken, kleine tools en de dagelijkse frictie tussen ontwerpwerk en software."
 	>
 		<div class="article-teaser-list">
 			{latestPosts.map((post) => (
@@ -77,37 +108,38 @@ const latestPosts = (await getCollection('posts'))
 			))}
 		</div>
 		<p class="section-link">
-			<a href="/grondlaag/inzichten">bekijk alle artikels</a>
+			<a href="/grondlaag/inzichten">bekijk alle notities</a>
 		</p>
 	</Section>
 
 	<Section
 		id="wie"
-		title="wie zijn we"
-		intro="grondlaag brengt ervaring uit architectuur en data-architectuur samen."
+		title="wie zit erachter"
+		intro="grondlaag werkt op het snijpunt van architectuurpraktijk, computerwetenschappen en data-architectuur."
 	>
 		<div class="about-text">
 			<p>
-				grondlaag wordt opgebouwd door een architect en een data-architect, elk met een eigen achtergrond maar met een gedeelde focus op structuur en samenhang.
+				grondlaag is geen klassieke softwareconsultancy en ook geen klassiek architectuuradvies.
+				het is een samenwerking tussen praktijkervaring in ontwerp en bouwcoördinatie,
+				en technische expertise in computerwetenschappen en data-architectuur.
 			</p>
 
 			<p>
-				vanuit architectuur komt ervaring in ontwerp, BIM en coordinatie van complexe projecten, waar modellen, plannen en documenten helder moeten blijven doorheen verschillende fases en teams.
+				die combinatie is belangrijk. veel digitale problemen in architectenbureaus zitten niet in één programma,
+				maar in de verbinding tussen modellen, documenten, afspraken, bestekken, mappenstructuren en mensen.
+				om die problemen goed op te lossen, moet je zowel de bouwpraktijk als de onderliggende informatiestructuur begrijpen.
 			</p>
 
 			<p>
-				de rol van data-architect komt uit de IT-wereld en focust op hoe informatie wordt opgebouwd, gestructureerd en gebruikt binnen systemen. die manier van denken wordt toegepast op de bouwpraktijk, waar dezelfde problemen rond structuur en samenhang vaak terugkomen.
-			</p>
-
-			<p>
-				die combinatie maakt het mogelijk om problemen niet alleen te herkennen, maar ook gericht op te lossen binnen lopende projecten.
+				grondlaag gebruikt die dubbele blik om werkprocessen leesbaar, overdraagbaar en bruikbaar te maken:
+				niet als abstract systeem, maar als concrete ondersteuning voor ontwerpteams die dagelijks met complexe projecten werken.
 			</p>
 		</div>
 	</Section>
 
 	<Section id="contact" title="contact">
 		<p class="contact-line">
-			neem vrijblijvend contact op via <a href="mailto:grondlaag@proton.me">grondlaag@proton.me</a> of <a href="https://cal.eu/grondlaag/snelle-babbel">boek een snelle babbel</a>.
+			loop je vast op digitale structuur, werkafspraken of tools? stuur een mail naar <a href="mailto:grondlaag@proton.me">grondlaag@proton.me</a> of <a href="https://cal.eu/grondlaag/snelle-babbel">boek een snelle babbel</a>.
 		</p>
 	</Section>
 </main>

@@ -1,6 +1,6 @@
 ---
-title: artikels
-description: overzicht van artikels en observaties van grondlaag.
+title: notities
+description: overzicht van notities en observaties van grondlaag.
 eyebrow: inhoud
 ---
 

@@ -3,4 +3,6 @@ title: opleidingen
 description: overzicht van opleidingen en sessies van grondlaag.
 ---
 
-gerichte avondsessies rond afgebakende thema's. geen brede opleidingen, maar specifieke onderwerpen die vaak impliciet blijven in projectwerking. we maken zichtbaar hoe ze werken en hoe je er bewuster mee omgaat.
+gerichte avondsessies voor architecten- en ontwerpteams die hun digitale werking beter willen begrijpen en organiseren.
+
+geen brede opleidingen of softwarecursussen, maar korte sessies rond afgebakende thema’s die vaak impliciet blijven in projectwerking.
