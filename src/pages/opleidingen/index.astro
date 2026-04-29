@@ -1,9 +1,15 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import ServiceCard from '../../components/ServiceCard.astro';
 import Layout from '../../layouts/Layout.astro';
 import { getExcerpt, sortByManualOrder } from '../../utils/content';
 
+const page = await getEntry('paginas', 'opleidingen');
+if (!page) {
+	throw new Error('Pagina content ontbreekt: src/content/paginas/opleidingen.md');
+}
+
+const { Content } = await render(page);
 const opleidingen = sortByManualOrder(await getCollection('opleidingen'));
 
 function getStatusPresentation(status?: string) {
@@ -22,13 +28,15 @@ function getStatusPresentation(status?: string) {
 ---
 
 <Layout
-	title="opleidingen | grondlaag"
-	description="Overzicht van opleidingen en sessies van grondlaag."
+	title={`${page.data.title} | grondlaag`}
+	description={page.data.description}
 >
 	<main class="listing-page container">
 		<header class="listing-header">
-			<h1>opleidingen</h1>
-			<p class="listing-intro">Gerichte avondsessies rond afgebakende thema’s. Geen brede opleidingen, maar specifieke onderwerpen die vaak impliciet blijven in projectwerking. We maken zichtbaar hoe ze werken en hoe je er bewuster mee omgaat.</p>
+			<h1>{page.data.title}</h1>
+			<div class="listing-intro">
+				<Content />
+			</div>
 		</header>
 
 		<div class="service-grid">

@@ -1,10 +1,10 @@
 ---
-title: obsidian templates
+title: Obsidian templates
 description: herbruikbare notitiesjablonen voor projectinformatie, overleg en digitale werkafspraken.
 order: 5
 category: template
 tags:
-  - obsidian
+  - Obsidian
   - templates
   - notities
 status: binnenkort
@@ -13,7 +13,7 @@ cta_label: ontvang meer info
 cta_link: mailto:grondlaag@proton.me?subject=obsidian%20templates
 ---
 
-een kleine set templates voor obsidian, bedoeld om projectinformatie minder los en minder improviserend te bewaren.
+een kleine set templates voor Obsidian, bedoeld om projectinformatie minder los en minder improviserend te bewaren.
 
 de focus ligt op notities die later ook nog bruikbaar zijn: overleg, beslissingen, referenties, open punten en interne afspraken. veel systemen mislukken niet omdat de software verkeerd gekozen is, maar omdat de inhoud geen vaste vorm krijgt. dan blijft alles afhankelijk van geheugen en gewoonte.
 

@@ -1,10 +1,10 @@
 ---
-title: excel sanity checks
+title: Excel sanity checks
 description: snelle controles op totalen, dubbele regels en ontbrekende posten.
 order: 3
 category: template
 tags:
-  - excel
+  - Excel
   - controle
 status: binnenkort
 price: op aanvraag
@@ -12,4 +12,4 @@ cta_label: ontvang meer info
 cta_link: mailto:grondlaag@proton.me?subject=excel%20sanity%20checks
 ---
 
-Deze toolverzameling helpt om spreadsheets niet alleen te vullen, maar ook systematisch te controleren op eenvoudige fouten.
+deze toolverzameling helpt om spreadsheets niet alleen te vullen, maar ook systematisch te controleren op eenvoudige fouten.

@@ -13,16 +13,16 @@ cta_label: meer info
 cta_link: mailto:grondlaag@proton.me?subject=pdf%20annotatie%20pack
 ---
 
-Steeds meer tools werken met abonnementen.
+steeds meer tools werken met abonnementen.
 
-Wat begint als handig, wordt na verloop van tijd moeilijk te vermijden. Licenties lopen door, prijzen stijgen, en stoppen is zelden vanzelfsprekend.
+wat begint als handig, wordt na verloop van tijd moeilijk te vermijden. licenties lopen door, prijzen stijgen, en stoppen is zelden vanzelfsprekend.
 
-Tegelijk bestaan er alternatieven.
+tegelijk bestaan er alternatieven.
 
-Kleiner, eenvoudiger, soms minder afgewerkt, maar vaak verrassend bruikbaar in de praktijk.
+kleiner, eenvoudiger, soms minder afgewerkt, maar vaak verrassend bruikbaar in de praktijk.
 
-Dit is een selectie van tools die we zelf gebruiken of getest hebben. Geen volledige lijst, maar wat werkt.
+dit is een selectie van tools die we zelf gebruiken of getest hebben. geen volledige lijst, maar wat werkt.
 
-Voor wie minder afhankelijk wil zijn van grote systemen, en liever zelf kiest wat blijft.
+voor wie minder afhankelijk wil zijn van grote systemen, en liever zelf kiest wat blijft.
 
 ## grafische software

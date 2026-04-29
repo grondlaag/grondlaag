@@ -1,6 +1,6 @@
 import { glob } from 'astro/loaders';
 import { defineCollection } from 'astro:content';
-import { datedCollectionSchema, catalogueCollectionSchema } from './content/config';
+import { datedCollectionSchema, catalogueCollectionSchema, pageCollectionSchema } from './content/config';
 
 const advies = defineCollection({
 	loader: glob({ pattern: '**/*.md', base: './src/content/advies' }),
@@ -22,9 +22,15 @@ const opleidingen = defineCollection({
 	schema: catalogueCollectionSchema,
 });
 
+const paginas = defineCollection({
+	loader: glob({ pattern: '**/*.md', base: './src/content/paginas' }),
+	schema: pageCollectionSchema,
+});
+
 export const collections = {
 	advies,
 	posts,
 	alaambak,
 	opleidingen,
+	paginas,
 };

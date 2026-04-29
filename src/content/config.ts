@@ -25,3 +25,9 @@ export const catalogueCollectionSchema = z.object({
 	pdf: z.string().optional(),
 	featured: z.boolean().optional(),
 });
+
+export const pageCollectionSchema = z.object({
+	title: z.string(),
+	description: z.string(),
+	eyebrow: z.string().optional(),
+});

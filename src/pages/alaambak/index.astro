@@ -1,9 +1,15 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import ServiceCard from '../../components/ServiceCard.astro';
 import Layout from '../../layouts/Layout.astro';
 import { getExcerpt, sortByManualOrder } from '../../utils/content';
 
+const page = await getEntry('paginas', 'alaambak');
+if (!page) {
+	throw new Error('Pagina content ontbreekt: src/content/paginas/alaambak.md');
+}
+
+const { Content } = await render(page);
 const items = sortByManualOrder(await getCollection('alaambak'));
 
 function getStatusPresentation(status?: string) {
@@ -22,13 +28,13 @@ function getStatusPresentation(status?: string) {
 }
 ---
 
-<Layout title="alaambak | grondlaag" description="Overzicht van kleine tools en hulpmiddelen van grondlaag.">
+<Layout title={`${page.data.title} | grondlaag`} description={page.data.description}>
 	<main class="listing-page container">
 		<header class="listing-header">
-			<h1>alaambak</h1>
-			<p class="listing-intro">
-				Kleine hulpmiddelen en eenvoudige tools. Geen grote systemen, maar compacte ingrepen die iets duidelijker, sneller of leesbaarder maken in de praktijk. Wat hier zit, is meestal klein. Maar net daarom bruikbaar.
-			</p>
+			<h1>{page.data.title}</h1>
+			<div class="listing-intro">
+				<Content />
+			</div>
 		</header>
 
 		<div class="service-grid">

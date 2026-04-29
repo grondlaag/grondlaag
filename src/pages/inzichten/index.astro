@@ -1,22 +1,28 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import ArticleCard from '../../components/ArticleCard.astro';
 import Layout from '../../layouts/Layout.astro';
 import { getExcerpt } from '../../utils/content';
 
+const page = await getEntry('paginas', 'artikels');
+if (!page) {
+	throw new Error('Pagina content ontbreekt: src/content/paginas/artikels.md');
+}
+
+const { Content } = await render(page);
 const posts = (await getCollection('posts')).sort(
 	(a, b) => b.data.date.getTime() - a.data.date.getTime(),
 );
 ---
 
-<Layout title="artikels | grondlaag" description="Overzicht van artikels en observaties van grondlaag.">
+<Layout title={`${page.data.title} | grondlaag`} description={page.data.description}>
 	<main class="listing-page container">
 		<header class="listing-header">
-			<p class="eyebrow">inhoud</p>
-			<h1>artikels</h1>
-			<p class="listing-intro">
-				Korte observaties over digitale projectwerking. Momenten waarop iets zichtbaar wordt: waar systemen beginnen te wringen, of net werken. Meestal klein, soms fundamenteel.
-			</p>
+			{page.data.eyebrow && <p class="eyebrow">{page.data.eyebrow}</p>}
+			<h1>{page.data.title}</h1>
+			<div class="listing-intro">
+				<Content />
+			</div>
 		</header>
 
 		<div class="article-listing">

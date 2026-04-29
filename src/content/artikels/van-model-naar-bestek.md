@@ -7,4 +7,4 @@ tags:
   - bestek
 ---
 
-De kernvraag is niet hoeveel data een model bevat, maar welke informatie later betrouwbaar terug te vinden blijft in documentatie en uitvoering.
+de kernvraag is niet hoeveel data een model bevat, maar welke informatie later betrouwbaar terug te vinden blijft in documentatie en uitvoering.

@@ -1,19 +1,25 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import ServiceCard from '../../components/ServiceCard.astro';
 import Layout from '../../layouts/Layout.astro';
 import { getExcerpt, sortByManualOrder } from '../../utils/content';
 
+const page = await getEntry('paginas', 'advies');
+if (!page) {
+	throw new Error('Pagina content ontbreekt: src/content/paginas/advies.md');
+}
+
+const { Content } = await render(page);
 const adviceItems = sortByManualOrder(await getCollection('advies'));
 ---
 
-<Layout title="advies | grondlaag" description="Praktisch advies rond digitale structuur voor architecten.">
+<Layout title={`${page.data.title} | grondlaag`} description={page.data.description}>
 	<main class="listing-page container">
 		<header class="listing-header">
-			<h1>advies</h1>
-			<p class="listing-intro">
-				Gerichte begeleiding rond je digitale werking. We kijken naar hoe informatie vandaag wordt opgebouwd, gebruikt en doorgegeven, en waar samenhang ontbreekt. Niet als theorie, maar als basis voor concrete ingrepen.
-			</p>
+			<h1>{page.data.title}</h1>
+			<div class="listing-intro">
+				<Content />
+			</div>
 		</header>
 
 		<div class="service-grid">
