@@ -1,5 +1,5 @@
-export function getExcerpt(body: string, fallback: string, maxLength = 180) {
-	const cleaned = body
+export function getExcerpt(body: string | undefined, fallback: string, maxLength = 180) {
+	const cleaned = (body ?? '')
 		.replace(/[#>*_`[\]]/g, '')
 		.replace(/\((.*?)\)/g, '')
 		.replace(/\s+/g, ' ')
