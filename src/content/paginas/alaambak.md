@@ -1,6 +1,10 @@
 ---
 title: alaambak
-description: overzicht van kleine tools en hulpmiddelen van grondlaag.
+description: kleine tools en hulpmiddelen van grondlaag.
 ---
 
-kleine hulpmiddelen en eenvoudige tools. geen grote systemen, maar compacte ingrepen die iets duidelijker, sneller of leesbaarder maken in de praktijk. wat hier zit, is meestal klein. maar net daarom bruikbaar.
+kleine hulpmiddelen voor plekken waar grote systemen te zwaar, te traag of te abstract zijn.
+
+alaambak is geen platform en geen productlijn. het is een rek met praktische formats, checks en browsertools die tonen hoe grondlaag werkt: minder twijfel, minder losse uitleg, meer informatie die op haar plek blijft.
+
+wat hier zit, is meestal klein. net daarom kan het in echte projectwerking terechtkomen.

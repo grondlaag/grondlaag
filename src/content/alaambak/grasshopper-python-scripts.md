@@ -1,7 +1,7 @@
 ---
 title: Grasshopper Python scripts
-description: kleine scripts voor terugkerende taken, controles en gerichte automatisatie in Grasshopper.
-order: 6
+description: compacte scripts voor terugkerende controles, opschoning en kleine automatisaties in Grasshopper.
+order: 7
 category: script
 tags:
   - Grasshopper
@@ -13,7 +13,7 @@ cta_label: ontvang meer info
 cta_link: mailto:grondlaag@proton.me?subject=grasshopper%20python%20scripts
 ---
 
-een verzameling van kleine Python-scripts voor Grasshopper die niet proberen alles over te nemen, maar wel repetitief werk lichter maken.
+Grasshopper Python scripts zijn bedoeld voor definities die niet nog meer componenten nodig hebben, maar wel een duidelijker stukje logica.
 
 de focus ligt op eenvoudige ingrepen: data opschonen, lijsten controleren, inputs omzetten, naming logischer maken of net die ene stap automatiseren die anders telkens handmatig gebeurt. geen grote generatieve machine, wel bruikbare stukken logica.
 

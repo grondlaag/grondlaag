@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import CatalogueDetail from '../../components/CatalogueDetail.astro';
 import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
@@ -16,34 +17,20 @@ const { Content } = await render(item);
 ---
 
 <Layout title={`${item.data.title} | grondlaag`} description={item.data.description}>
-	<main class="article-page container">
-		<header class="article-header">
-			<p class="eyebrow">advies</p>
-			{item.data.date && <p class="listing-meta">{item.data.date.toLocaleDateString('nl-BE')}</p>}
-			<h1>{item.data.title}</h1>
-			<p class="article-intro">{item.data.description}</p>
-			<div class="catalogue-meta">
-				{item.data.status && <p><span>status</span> {item.data.status}</p>}
-				{item.data.price && <p><span>prijs</span> {item.data.price}</p>}
-			</div>
-			{(item.data.cta_label && item.data.cta_link) || (item.data.secondary_cta_label && item.data.secondary_cta_link) ? (
-				<div class="catalogue-cta-group">
-					{item.data.cta_label && item.data.cta_link && (
-						<p class="catalogue-cta"><a class="button" href={item.data.cta_link}>{item.data.cta_label}</a></p>
-					)}
-					{item.data.secondary_cta_label && item.data.secondary_cta_link && (
-						<p class="catalogue-cta">
-							<a class="button button--secondary" href={item.data.secondary_cta_link}>
-								{item.data.secondary_cta_label}
-							</a>
-						</p>
-					)}
-				</div>
-			) : null}
-		</header>
-
-		<article class="article-body">
-			<Content />
-		</article>
-	</main>
+	<CatalogueDetail
+		title={item.data.title}
+		description={item.data.description}
+		eyebrow="advies"
+		date={item.data.date}
+		meta={[
+			{ label: 'status', value: item.data.status },
+			{ label: 'prijs', value: item.data.price },
+		]}
+		ctas={[
+			{ label: item.data.cta_label, href: item.data.cta_link },
+			{ label: item.data.secondary_cta_label, href: item.data.secondary_cta_link, variant: 'secondary' },
+		]}
+	>
+		<Content />
+	</CatalogueDetail>
 </Layout>

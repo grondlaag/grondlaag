@@ -2,33 +2,33 @@
 title: grondlaagdiagnose
 description: gerichte analyse van je digitale werking met concrete voorstellen voor structuur en samenhang.
 order: 2
-category: inzicht
+category: we willen weten waar de logica breekt
 tags:
   - advies
   - analyse
 status: beschikbaar
 price: meestal tussen €700 en €900
-cta_label: vraag een grondlaag analyse aan
-cta_link: mailto:grondlaag@proton.me?subject=grondlaag%20analyse
+cta_label: vraag een grondlaagdiagnose aan
+cta_link: mailto:grondlaag@proton.me?subject=grondlaagdiagnose
 featured: true
 ---
 
-een gerichte analyse van hoe digitale informatie binnen het bureau wordt opgebouwd, gebruikt en doorgegeven.
+kies dit wanneer het probleem structureler voelt: modellen, documenten, lijsten en afspraken bestaan wel, maar ze versterken elkaar niet genoeg.
 
-waar het analysegesprek een eerste lezing geeft, gaat de grondlaag analyse een stap verder. we kijken concreet naar hoe projecten vandaag zijn opgezet en waar de samenhang ontbreekt tussen modellen, documenten, lijsten en afspraken.
+waar het analysegesprek een eerste lezing geeft, gaat de grondlaagdiagnose een stap verder. we kijken concreet naar hoe projecten vandaag zijn opgezet en waar de samenhang ontbreekt tussen modellen, documenten, lijsten en afspraken.
 
 dat kan gaan over:
 
-- hoe model, documenten en meetstaten zich tot elkaar verhouden  
-- hoe informatie doorheen het project wordt opgebouwd en aangepast  
-- waar overdracht moeilijk of onduidelijk wordt  
-- waar dubbel werk ontstaat zonder dat het zichtbaar is  
+- hoe model, documenten en meetstaten zich tot elkaar verhouden
+- hoe informatie doorheen het project wordt opgebouwd en aangepast
+- waar overdracht moeilijk of onduidelijk wordt
+- waar dubbel werk ontstaat zonder dat het zichtbaar is
 
 tijdens deze analyse wordt scherp waar het fout loopt:
 
-- waar informatie versnipperd raakt  
-- waar logica ontbreekt of inconsistent wordt  
-- waar kleine ingrepen een groot effect kunnen hebben  
+- waar informatie versnipperd raakt
+- waar logica ontbreekt of inconsistent wordt
+- waar kleine ingrepen een groot effect kunnen hebben
 
 je krijgt geen algemeen advies, maar een gerichte lezing van je eigen werking, met concrete voorstellen om die helderder op te bouwen.
 
@@ -38,6 +38,6 @@ de output is compact en bruikbaar: geen uitgebreid rapport, maar een duidelijke 
 
 deze analyse is vaak het kantelpunt tussen:
 
-we voelen dat het niet klopt  
-en  
+we voelen dat het niet klopt
+en
 we weten waar we moeten beginnen

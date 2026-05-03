@@ -1,19 +1,22 @@
 ---
+import { withBase } from '../utils/routes';
+
 const links = [
-	{ href: '/grondlaag/', label: 'home' },
-	{ href: '/grondlaag/advies', label: 'advies' },
-	{ href: '/grondlaag/opleidingen', label: 'opleidingen' },
-	{ href: '/grondlaag/alaambak', label: 'alaambak' },
-	{ href: '/grondlaag/inzichten', label: 'notities' },
+	{ href: withBase(), label: 'home' },
+	{ href: withBase('advies'), label: 'advies' },
+	{ href: withBase('opleidingen'), label: 'opleidingen' },
+	{ href: withBase('alaambak'), label: 'alaambak' },
+	{ href: withBase('inzichten'), label: 'notities' },
 ];
 
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const homePath = withBase().replace(/\/$/, '') || '/';
 
 const isLinkActive = (href: string) => {
 	const normalizedHref = href.replace(/\/$/, '') || '/';
 
-	if (normalizedHref === '/grondlaag') {
-		return currentPath === '/grondlaag';
+	if (normalizedHref === homePath) {
+		return currentPath === homePath;
 	}
 
 	return currentPath === normalizedHref || currentPath.startsWith(`${normalizedHref}/`);
@@ -22,7 +25,7 @@ const isLinkActive = (href: string) => {
 
 <header class="site-nav">
 	<div class="container site-nav__inner">
-		<a class="site-nav__brand" href="/grondlaag/">grondlaag</a>
+		<a class="site-nav__brand" href={withBase()}>grondlaag</a>
 		<nav aria-label="hoofdnavigatie">
 			<ul class="site-nav__list">
 				{

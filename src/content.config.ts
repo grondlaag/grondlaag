@@ -8,7 +8,7 @@ const advies = defineCollection({
 });
 
 const posts = defineCollection({
-	loader: glob({ pattern: '**/*.md', base: './src/content/artikels' }),
+	loader: glob({ pattern: '**/*.md', base: './src/content/notities' }),
 	schema: datedCollectionSchema,
 });
 

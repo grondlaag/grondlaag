@@ -3,6 +3,7 @@ import { getCollection, getEntry, render } from 'astro:content';
 import ServiceCard from '../../components/ServiceCard.astro';
 import Layout from '../../layouts/Layout.astro';
 import { getExcerpt, sortByManualOrder } from '../../utils/content';
+import { withBase } from '../../utils/routes';
 
 const page = await getEntry('paginas', 'advies');
 if (!page) {
@@ -27,7 +28,7 @@ const adviceItems = sortByManualOrder(await getCollection('advies'));
 				<ServiceCard
 					title={item.data.title}
 					description={getExcerpt(item.body, item.data.description)}
-					href={`/grondlaag/advies/${item.id}/`}
+					href={withBase(`advies/${item.id}/`)}
 					meta={item.data.price}
 					category={item.data.category}
 					accent={item.data.accent}

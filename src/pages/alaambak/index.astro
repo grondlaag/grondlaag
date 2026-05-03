@@ -2,7 +2,9 @@
 import { getCollection, getEntry, render } from 'astro:content';
 import ServiceCard from '../../components/ServiceCard.astro';
 import Layout from '../../layouts/Layout.astro';
+import { getStatusPresentation } from '../../utils/catalogue';
 import { getExcerpt, sortByManualOrder } from '../../utils/content';
+import { withBase } from '../../utils/routes';
 
 const page = await getEntry('paginas', 'alaambak');
 if (!page) {
@@ -11,21 +13,6 @@ if (!page) {
 
 const { Content } = await render(page);
 const items = sortByManualOrder(await getCollection('alaambak'));
-
-function getStatusPresentation(status?: string) {
-	switch (status?.toLowerCase()) {
-		case 'beschikbaar':
-			return { label: 'beschikbaar', tone: 'available' as const };
-		case 'volzet':
-			return { label: 'volzet', tone: 'full' as const };
-		case 'voorzien':
-		case 'binnenkort':
-		case 'in opbouw':
-			return { label: 'binnenkort', tone: 'soon' as const };
-		default:
-			return undefined;
-	}
-}
 ---
 
 <Layout title={`${page.data.title} | grondlaag`} description={page.data.description}>
@@ -45,7 +32,7 @@ function getStatusPresentation(status?: string) {
 					<ServiceCard
 						title={item.data.title}
 						description={getExcerpt(item.body, item.data.description)}
-						href={`/grondlaag/alaambak/${item.id}/`}
+						href={withBase(`alaambak/${item.id}/`)}
 						meta={item.data.price}
 						category={item.data.category}
 						status={status?.label}

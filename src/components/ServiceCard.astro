@@ -11,14 +11,11 @@ interface Props {
 	accent?: boolean;
 }
 
-// aanbodspagina's gebruiken een stabielere fichekaart met subtiele metadata
 const { title, description, href, label, category, meta, status, statusTone, accent } = Astro.props;
 ---
 
-<!-- accent voegt een extra kaartklasse toe voor subtiele visuele nadruk. -->
 <a class:list={['service-card', accent && 'service-card--accent']} href={href}>
 	{label && <p class="service-card__label">{label}</p>}
-	{/* category wordt als klein label boven de titel getoond wanneer aanwezig. */}
 	{category && <p class="service-card__category">{category}</p>}
 	<h2>{title}</h2>
 	<p>{description}</p>

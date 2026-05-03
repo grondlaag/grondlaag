@@ -1,9 +1,11 @@
 ---
+import { withBase } from '../utils/routes';
+
 interface Props {
 	title: string;
 	subtitle: string;
 	text: string;
-	textSecond: String;
+	textSecond: string;
 	ctaHref: string;
 	ctaLabel: string;
 	secondaryCtaHref?: string;
@@ -27,8 +29,14 @@ const { title, subtitle, text, textSecond, ctaHref, ctaLabel, secondaryCtaHref, 
 				)}
 			</div>
 		</div>
-		<figure class="hero__media" aria-label="architectuuratelier met digitale assistenten aan tekentafels">
-			<img src="/grondlaag/grondlaag-banner.png" alt="" loading="eager" decoding="async" />
+		<figure class="hero__media">
+			<img
+				src={withBase('grondlaag-banner.png')}
+				alt="architectuuratelier met digitale structuur op de werktafel"
+				loading="eager"
+				decoding="async"
+				fetchpriority="high"
+			/>
 		</figure>
 	</div>
 </section>

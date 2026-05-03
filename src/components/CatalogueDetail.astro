@@ -1,0 +1,58 @@
+---
+interface MetaItem {
+	label: string;
+	value?: string;
+}
+
+interface CatalogueCta {
+	label?: string;
+	href?: string;
+	variant?: 'primary' | 'secondary';
+}
+
+interface Props {
+	title: string;
+	description: string;
+	eyebrow: string;
+	date?: Date;
+	meta?: MetaItem[];
+	ctas?: CatalogueCta[];
+}
+
+const { title, description, eyebrow, date, meta = [], ctas = [] } = Astro.props;
+const visibleMeta = meta.filter((item) => item.value);
+const visibleCtas = ctas.filter((cta) => cta.label && cta.href);
+---
+
+<main class="article-page container">
+	<header class="article-header">
+		<p class="eyebrow">{eyebrow}</p>
+		{date && <p class="listing-meta">{date.toLocaleDateString('nl-BE')}</p>}
+		<h1>{title}</h1>
+		<p class="article-intro">{description}</p>
+
+		{visibleMeta.length > 0 && (
+			<div class="catalogue-meta">
+				{visibleMeta.map((item) => (
+					<p><span>{item.label}</span> {item.value}</p>
+				))}
+			</div>
+		)}
+
+		{visibleCtas.length > 0 && (
+			<div class="catalogue-cta-group">
+				{visibleCtas.map((cta) => (
+					<p class="catalogue-cta">
+						<a class:list={['button', cta.variant === 'secondary' && 'button--secondary']} href={cta.href}>
+							{cta.label}
+						</a>
+					</p>
+				))}
+			</div>
+		)}
+	</header>
+
+	<article class="article-body">
+		<slot />
+	</article>
+</main>

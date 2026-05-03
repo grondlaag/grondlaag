@@ -1,6 +1,7 @@
 ---
 import HomepageContent from '../../components/HomepageContent.astro';
 import Layout from '../../layouts/Layout.astro';
+import { withBase } from '../../utils/routes';
 ---
 
 <!-- previewroute: variant die de subtiel rebels-taal behoudt maar dichter tegen het origineel aanleunt -->
@@ -12,9 +13,9 @@ import Layout from '../../layouts/Layout.astro';
 	<div class="preview-banner container">
 		<p>preview theme: rebels dichtbij</p>
 		<p>
-			<a href="/grondlaag/proeven/rebels-onredelijk">onredelijk</a>
-			<a href="/grondlaag/proeven/rebels-clever">clever CSS</a>
-			<a href="/grondlaag/">origineel</a>
+			<a href={withBase('proeven/rebels-onredelijk')}>onredelijk</a>
+			<a href={withBase('proeven/rebels-clever')}>clever CSS</a>
+			<a href={withBase()}>origineel</a>
 		</p>
 	</div>
 	<HomepageContent />

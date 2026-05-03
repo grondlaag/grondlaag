@@ -2,8 +2,8 @@
 title: huur een nerd
 description: gerichte ingrepen in je digitale werking, zonder extra ruis.
 order: 3
-accent: true
-category: ingreep
+accent: false
+category: we willen dat iemand het mee oplost
 tags:
   - advies
   - uitvoering
@@ -14,7 +14,7 @@ cta_link: mailto:grondlaag@proton.me?subject=huur%20een%20nerd
 featured: true
 ---
 
-soms is inzicht niet genoeg.
+kies dit wanneer je ongeveer weet waar het wringt, maar niemand in het bureau tijd of afstand heeft om het echt op te lossen.
 
 je weet waar het vastloopt, maar het vraagt tijd en focus om de juiste ingrepen effectief door te voeren.
 
@@ -22,10 +22,10 @@ je weet waar het vastloopt, maar het vraagt tijd en focus om de juiste ingrepen 
 
 dat kan gaan over:
 
-- het opzetten of herstructureren van een duidelijke digitale basis  
-- het vereenvoudigen van bestaande workflows  
-- het afstemmen van model, documenten en besteklogica  
-- het uitwerken van kleine tools of scripts die repetitief werk wegnemen  
+- het opzetten of herstructureren van een duidelijke digitale basis
+- het vereenvoudigen van bestaande workflows
+- het afstemmen van model, documenten en besteklogica
+- het uitwerken van kleine tools of scripts die repetitief werk wegnemen
 
 de focus ligt op wat blijft. geen tijdelijke oplossing, maar structurele verbetering die ook werkt zonder mij.
 

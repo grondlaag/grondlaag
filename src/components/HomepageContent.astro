@@ -4,22 +4,23 @@ import ArticleCard from './ArticleCard.astro';
 import Hero from './Hero.astro';
 import PillarCard from './PillarCard.astro';
 import Section from './Section.astro';
+import { withBase } from '../utils/routes';
 
 const pillars = [
 	{
 		title: '1. advies',
-		description: 'gerichte hulp bij digitale knopen: mappenstructuren, modelafspraken, besteklogica, informatiebeheer, toolkeuzes en vastgelopen workflows.',
-		href: '/grondlaag/advies',
+		description: 'gerichte hulp wanneer projectlogica te veel in hoofden, mappen, modellen, bestekken of spreadsheets zit.',
+		href: withBase('advies'),
 	},
 	{
 		title: '2. opleidingen',
-		description: 'praktische sessies voor ontwerpteams die beter willen samenwerken met modellen, documenten, data en afspraken die ook na de opleiding bruikbaar blijven.',
-		href: '/grondlaag/opleidingen',
+		description: 'praktische sessies voor ontwerpteams die minder willen gokken in Revit, Excel, codering, documenten en digitale afspraken.',
+		href: withBase('opleidingen'),
 	},
 	{
 		title: '3. alaambak',
-		description: 'geen platform, geen dashboard, geen belofte van totale controle. wel formats, checks en kleine tools die een concreet probleem oplossen.',
-		href: '/grondlaag/alaambak',
+		description: 'geen platform, geen dashboard, geen belofte van totale controle. wel kleine formats, checks en tools voor plekken waar projecten beginnen lekken.',
+		href: withBase('alaambak'),
 	},
 ];
 
@@ -31,30 +32,30 @@ const latestPosts = (await getCollection('posts'))
 <main>
 	<Hero
 		title="grondlaag"
-		subtitle="digitale structuur voor architecten en ontwerpteams"
-		text="grondlaag helpt kleine en middelgrote architecten- en ontwerpteams om digitale werkprocessen leesbaar, overdraagbaar en bruikbaar te maken."
-		textSecond="niet door er nog een zwaar systeem bovenop te zetten, maar door de onderlaag helder te krijgen: afspraken, informatie, mappen, modellen, documenten en kleine tools."
+		subtitle="minder twijfel in mappen, modellen en meetstaten"
+		text="grondlaag helpt kleine en middelgrote architecten- en ontwerpteams wanneer bestanden, BIM-logica, bestekken, spreadsheets en afspraken elk hun eigen waarheid beginnen vertellen."
+		textSecond="geen nieuw systeem bovenop de chaos. eerst maken we de onderlaag leesbaar: wat staat waar, wie vertrouwt waarop, en welke informatie moet later nog kloppen?"
 		ctaHref="mailto:grondlaag@proton.me"
-		ctaLabel="contacteer ons"
+		ctaLabel="toon waar het vastloopt"
 		secondaryCtaHref="https://cal.eu/grondlaag/snelle-babbel"
 		secondaryCtaLabel="boek een snelle babbel"
 	/>
 
 	<Section
 		id="probleem"
-		title="waar het vaak vastloopt"
+		title="waar projecten digitaal beginnen lekken"
 	>
 		<div class="problem-text">
 			<p>
-				in veel ontwerpteams ontstaan digitale problemen niet door een gebrek aan inzet,
-				maar door een gebrek aan gedeelde structuur. bestanden krijgen verschillende logica's,
-				modellen groeien volgens projectdruk, afspraken zitten verspreid in mails en kennis blijft te vaak in hoofden hangen.
+				in veel ontwerpteams ontstaat digitale ruis niet door een gebrek aan inzet.
+				het probleem is dat iedereen net anders ordent: een mapnaam, een Revit-parameter,
+				een Excel-lijst, een besteknummer of een afspraak in een mail krijgt telkens een eigen kleine logica.
 			</p>
 
 			<p>
-				daardoor wordt samenwerken moeilijker dan nodig: informatie is moeilijk terug te vinden,
-				beslissingen zijn slecht traceerbaar, modellen worden broos en kleine fouten keren telkens terug.
-				grondlaag vertrekt vanuit die dagelijkse frictie.
+				zolang die logica privaat blijft, betaalt het team telkens opnieuw: zoeken, vragen,
+				controleren, exporteren, hernoemen, herstellen. grondlaag vertrekt vanuit die dagelijkse twijfel,
+				omdat daar de meeste digitale structuur echt verloren gaat.
 			</p>
 		</div>
 	</Section>
@@ -68,25 +69,26 @@ const latestPosts = (await getCollection('posts'))
 			<p>
 				we vertrekken niet vanuit één softwarepakket of één vaste methode.
 				de vraag is eerst: welke informatie moet betrouwbaar blijven,
-				wie moet ermee werken en op welk moment in het project moet ze bruikbaar zijn?
+				wie moet ermee werken en wanneer moet iemand ze zonder uitleg kunnen begrijpen?
 			</p>
 
 			<p>
 				pas daarna komen mappenstructuren, modelafspraken, besteklogica, spreadsheets,
 				markdownbestanden, kleine webtools of automatisering in beeld.
 				de tool volgt de structuur, niet omgekeerd.
-
-				concreet kan dat betekenen dat we een team helpen om van zeven verschillende mappenstructuren naar één herkenbare projectstructuur te gaan. 
-				of dat we BIM-afspraken, besteknummers en meetstaatlogica beter op elkaar afstemmen, zodat informatie niet telkens opnieuw geïnterpreteerd moet worden.
 			</p>
 
+			<p>
+				concreet kan dat betekenen dat we een team helpen om van zeven verschillende mappenstructuren naar één herkenbare projectstructuur te gaan.
+				of dat we BIM-afspraken, besteknummers en meetstaatlogica beter op elkaar afstemmen, zodat informatie niet telkens opnieuw geïnterpreteerd moet worden.
+			</p>
 		</div>
 	</Section>
 
 	<Section
 		id="pijlers"
 		title="hoe we hier op ingrijpen"
-		intro="grondlaag werkt op drie niveaus: directe hulp wanneer een project vastloopt, opleiding zodat teams zelf sterker worden, en kleine hulpmiddelen die structuur tastbaar maken."
+		intro="grondlaag werkt op drie niveaus: directe hulp wanneer iets vastloopt, opleiding zodat teams hun eigen logica beter kunnen lezen, en kleine hulpmiddelen die structuur tastbaar maken."
 	>
 		<div class="pillar-grid">
 			{pillars.map((pillar) => <PillarCard {...pillar} />)}
@@ -94,28 +96,28 @@ const latestPosts = (await getCollection('posts'))
 	</Section>
 
 	<Section
-		id="artikels"
+		id="notities"
 		title="notities uit de praktijk"
-		intro="korte teksten over digitale structuur, samenwerking, BIM, bestekken, kleine tools en de dagelijkse frictie tussen ontwerpwerk en software."
+		intro="korte teksten over digitale structuur, samenwerking, BIM, bestekken, kleine tools en de dagelijkse twijfel tussen ontwerpwerk en software."
 	>
 		<div class="article-teaser-list">
 			{latestPosts.map((post) => (
 				<ArticleCard
 					title={post.data.title}
 					description={post.data.description}
-					href={`/grondlaag/inzichten/${post.id}/`}
+					href={withBase(`inzichten/${post.id}/`)}
 					date={post.data.date}
 				/>
 			))}
 		</div>
 		<p class="section-link">
-			<a href="/grondlaag/inzichten">bekijk alle notities</a>
+			<a href={withBase('inzichten')}>bekijk alle notities</a>
 		</p>
 	</Section>
 
 	<Section
 		id="wie"
-		title="wie zit erachter"
+		title="wie kijkt mee"
 		intro="grondlaag werkt op het snijpunt van architectuurpraktijk, computerwetenschappen en data-architectuur."
 	>
 		<div class="about-text">
@@ -140,7 +142,7 @@ const latestPosts = (await getCollection('posts'))
 
 	<Section id="contact" title="contact">
 		<p class="contact-line">
-			loop je vast op digitale structuur, werkafspraken of tools? stuur een mail naar <a href="mailto:grondlaag@proton.me">grondlaag@proton.me</a> of <a href="https://cal.eu/grondlaag/snelle-babbel">boek een snelle babbel</a>.
+			loopt je projectlogica vast in mappen, modellen, meetstaten of afspraken? stuur een mail naar <a href="mailto:grondlaag@proton.me">grondlaag@proton.me</a> of <a href="https://cal.eu/grondlaag/snelle-babbel">boek een snelle babbel</a>.
 		</p>
 	</Section>
 </main>

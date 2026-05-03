@@ -3,10 +3,11 @@ import { getCollection, getEntry, render } from 'astro:content';
 import ArticleCard from '../../components/ArticleCard.astro';
 import Layout from '../../layouts/Layout.astro';
 import { getExcerpt } from '../../utils/content';
+import { withBase } from '../../utils/routes';
 
-const page = await getEntry('paginas', 'artikels');
+const page = await getEntry('paginas', 'notities');
 if (!page) {
-	throw new Error('Pagina content ontbreekt: src/content/paginas/artikels.md');
+	throw new Error('Pagina content ontbreekt: src/content/paginas/notities.md');
 }
 
 const { Content } = await render(page);
@@ -30,7 +31,7 @@ const posts = (await getCollection('posts')).sort(
 				<ArticleCard
 					title={post.data.title}
 					description={getExcerpt(post.body, post.data.description)}
-					href={`/grondlaag/inzichten/${post.id}/`}
+					href={withBase(`inzichten/${post.id}/`)}
 					date={post.data.date}
 				/>
 			))}

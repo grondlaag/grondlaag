@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
+import { withBase } from '../utils/routes';
 
 interface Props {
 	title?: string;
@@ -43,7 +44,7 @@ const {
 					betalingen verlopen, indien van toepassing, via een externe partner.
 				</p>
 				<div class="site-footer__links" aria-label="footer">
-					<a href="/grondlaag/privacy">privacy</a>
+					<a href={withBase('privacy')}>privacy</a>
 					<a href="mailto:grondlaag@proton.me">contact</a>
 				</div>
 			</div>

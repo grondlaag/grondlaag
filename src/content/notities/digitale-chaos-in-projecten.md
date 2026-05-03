@@ -7,4 +7,4 @@ tags:
   - documentatie
 ---
 
-wanneer projectinformatie op meerdere plaatsen leeft, ontstaat bijna vanzelf ruis. dit artikel bundelt observaties uit de praktijk over hoe kleine inconsistenties zich opstapelen.
+wanneer projectinformatie op meerdere plaatsen leeft, ontstaat bijna vanzelf ruis. deze notitie bundelt observaties uit de praktijk over hoe kleine inconsistenties zich opstapelen.
