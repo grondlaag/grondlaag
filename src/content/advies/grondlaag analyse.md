@@ -1,43 +1,43 @@
 ---
-title: grondlaagdiagnose
-description: gerichte analyse van je digitale werking met concrete voorstellen voor structuur en samenhang.
+title: Grondlaagdiagnose
+description: Gerichte analyse van je digitale werking met concrete voorstellen voor structuur en samenhang.
 order: 2
-category: we willen weten waar de logica breekt
+category: We willen weten waar de logica breekt
 tags:
   - advies
   - analyse
 status: beschikbaar
 price: meestal tussen €700 en €900
-cta_label: vraag een grondlaagdiagnose aan
+cta_label: Vraag een grondlaagdiagnose aan
 cta_link: mailto:grondlaag@proton.me?subject=grondlaagdiagnose
 featured: true
 ---
 
-kies dit wanneer het probleem structureler voelt: modellen, documenten, lijsten en afspraken bestaan wel, maar ze versterken elkaar niet genoeg.
+Kies dit wanneer het probleem structureler voelt: modellen, documenten, lijsten en afspraken bestaan wel, maar ze versterken elkaar niet genoeg.
 
-waar het analysegesprek een eerste lezing geeft, gaat de grondlaagdiagnose een stap verder. we kijken concreet naar hoe projecten vandaag zijn opgezet en waar de samenhang ontbreekt tussen modellen, documenten, lijsten en afspraken.
+Waar het analysegesprek een eerste lezing geeft, gaat de grondlaagdiagnose een stap verder. We kijken concreet naar hoe projecten vandaag zijn opgezet en waar de samenhang ontbreekt tussen modellen, documenten, lijsten en afspraken.
 
-dat kan gaan over:
+Dat kan gaan over:
 
-- hoe model, documenten en meetstaten zich tot elkaar verhouden
-- hoe informatie doorheen het project wordt opgebouwd en aangepast
-- waar overdracht moeilijk of onduidelijk wordt
-- waar dubbel werk ontstaat zonder dat het zichtbaar is
+- Hoe model, documenten en meetstaten zich tot elkaar verhouden
+- Hoe informatie doorheen het project wordt opgebouwd en aangepast
+- Waar overdracht moeilijk of onduidelijk wordt
+- Waar dubbel werk ontstaat zonder dat het zichtbaar is
 
-tijdens deze analyse wordt scherp waar het fout loopt:
+Tijdens deze analyse wordt scherp waar het fout loopt:
 
-- waar informatie versnipperd raakt
-- waar logica ontbreekt of inconsistent wordt
-- waar kleine ingrepen een groot effect kunnen hebben
+- Waar informatie versnipperd raakt
+- Waar logica ontbreekt of inconsistent wordt
+- Waar kleine ingrepen een groot effect kunnen hebben
 
-je krijgt geen algemeen advies, maar een gerichte lezing van je eigen werking, met concrete voorstellen om die helderder op te bouwen.
+Je krijgt geen algemeen advies, maar een gerichte lezing van je eigen werking, met concrete voorstellen om die helderder op te bouwen.
 
-de analyse gebeurt op basis van een beperkt aantal projecten, modellen en documenten.
+De analyse gebeurt op basis van een beperkt aantal projecten, modellen en documenten.
 
-de output is compact en bruikbaar: geen uitgebreid rapport, maar een duidelijke richting en een reeks ingrepen die onmiddellijk toepasbaar zijn.
+De output is compact en bruikbaar: geen uitgebreid rapport, maar een duidelijke richting en een reeks ingrepen die onmiddellijk toepasbaar zijn.
 
-deze analyse is vaak het kantelpunt tussen:
+Deze analyse is vaak het kantelpunt tussen:
 
-we voelen dat het niet klopt
-en
-we weten waar we moeten beginnen
+We voelen dat het niet klopt
+En
+We weten waar we moeten beginnen

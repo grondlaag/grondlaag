@@ -1,7 +1,7 @@
 ---
-title: notities
-description: overzicht van notities en observaties van grondlaag.
-eyebrow: inhoud
+title: Notities
+description: Overzicht van notities en observaties van Grondlaag.
+eyebrow: Inhoud
 ---
 
-korte observaties over digitale projectwerking. momenten waarop iets zichtbaar wordt: waar systemen beginnen te wringen, of net werken. meestal klein, soms fundamenteel.
+Korte observaties over digitale projectwerking. Momenten waarop iets zichtbaar wordt: waar systemen beginnen te wringen, of net werken. Meestal klein, soms fundamenteel.

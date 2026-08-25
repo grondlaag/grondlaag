@@ -1,8 +1,8 @@
 ---
-title: codering in projecten
-description: een sessie over VMSW, NL-SfB en interne codering, en hoe je tot een leesbaar en bruikbaar systeem komt.
+title: Codering in projecten
+description: Een sessie over VMSW, NL-SfB en interne codering, en hoe je tot een leesbaar en bruikbaar systeem komt.
 order: 2
-category: structuur
+category: Structuur
 tags:
   - opleiding
   - codering
@@ -11,41 +11,41 @@ tags:
 status: beschikbaar
 price: €130
 duur: 2 uur
-cta_label: schrijf je in
+cta_label: Schrijf je in
 cta_link: mailto:grondlaag@proton.me?subject=inschrijving%20codering-projecten
 ---
 
-codering wordt vaak ingevoerd om structuur te brengen.
+Codering wordt vaak ingevoerd om structuur te brengen.
 
-in de praktijk zorgt het net zo vaak voor verwarring.
+In de praktijk zorgt het net zo vaak voor verwarring.
 
 VMSW, NL-SfB, interne codes, Revit-parameters… ze bestaan naast elkaar, overlappen, en worden zelden als één geheel bekeken.
 
-deze sessie gaat over hoe codering werkt binnen een projectcontext.
+Deze sessie gaat over hoe codering werkt binnen een projectcontext.
 
-niet als systeem op zich, maar als drager van informatie.
+Niet als systeem op zich, maar als drager van informatie.
 
-### wat komt aan bod
+### Wat komt aan bod
 
-- wat verschillende coderingssystemen proberen te doen  
-- verschil tussen VMSW, NL-SfB en interne structuren  
-- hoe codering zich verhoudt tot BIM-modellen en parameters  
-- waar overlap en conflicten ontstaan  
-- hoe je tot een werkbare combinatie komt  
-- principes voor leesbare en bruikbare codering  
+- Wat verschillende coderingssystemen proberen te doen  
+- Verschil tussen VMSW, NL-SfB en interne structuren  
+- Hoe codering zich verhoudt tot BIM-modellen en parameters  
+- Waar overlap en conflicten ontstaan  
+- Hoe je tot een werkbare combinatie komt  
+- Principes voor leesbare en bruikbare codering  
 
-de focus ligt niet op correcte toepassing van één norm, maar op samenhang tussen systemen.
+De focus ligt niet op correcte toepassing van één norm, maar op samenhang tussen systemen.
 
-### hoe de sessie verloopt
+### Hoe de sessie verloopt
 
-de sessie duurt twee uur en verloopt online in kleine groep.
+De sessie duurt twee uur en verloopt online in kleine groep.
 
-we werken met schema’s en concrete voorbeelden. er is ruimte voor korte vragen, maar geen uitwerking van individuele bureaustandaarden.
+We werken met schema’s en concrete voorbeelden. Er is ruimte voor korte vragen, maar geen uitwerking van individuele bureaustandaarden.
 
-het doel is inzicht krijgen in hoe codering werkt binnen projecten, zodat je er bewuster en consistenter mee kan omgaan.
+Het doel is inzicht krijgen in hoe codering werkt binnen projecten, zodat je er bewuster en consistenter mee kan omgaan.
 
-### voor wie
+### Voor wie
 
-voor architecten en BIM-verantwoordelijken die werken met codering, maar merken dat het meer complexiteit brengt dan helderheid.
+Voor architecten en BIM-verantwoordelijken die werken met codering, maar merken dat het meer complexiteit brengt dan helderheid.
 
-voor wie structuur zoekt zonder rigiditeit.
+Voor wie structuur zoekt zonder rigiditeit.
